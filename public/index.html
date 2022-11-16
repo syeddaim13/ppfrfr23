@@ -8,7 +8,33 @@
                 month = document.getElementById("month").value
                 year = document.getElementById("year").value
                 type = document.getElementById("type").value
-                window.location.href = '/'+subject+'/'+paper+'/'+month+year+type+'.pdf';
+                variant = document.getElementById("variant").value
+
+                switch (subject) {
+                    case "Math":
+                        subjectcode = "9709"
+                        break;
+                    case "IT":
+                        subjectcode = "9626"
+                        break;
+                    default:
+                        alert("Error in switch. Please report this.");
+                }
+                switch (month) {
+                    case "june":
+                        monthcode = "s"
+                        break;
+                    case "november":
+                        monthcode = "w"
+                        break;
+                    case "march":
+                        monthcode = "m"
+                        break;
+                    default:
+                        alert("Error in month switch. Please report this.");
+                }
+                console.log(subjectcode)
+                window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.pdf';
                 
             }
         </script>
@@ -26,8 +52,9 @@
         <label for="paper">Choose a paper: &nbsp;&nbsp;</label>
 
         <select name="paper" id="paper">
-        <option value="P3">Paper 3</option>
-        <option value="P4">Paper 4</option>
+        <option value="3">Paper 3</option>
+        <option value="4">Paper 4</option>
+        <option value="5">Paper 5</option>
         </select>
         <br />
         <label for="month">Choose a month:&nbsp;&nbsp;</label>
@@ -43,6 +70,18 @@
         <select name="year" id="year">
         <option value="17">2017</option>
         <option value="18">2018</option>
+        <option value="19">2019</option>
+        <option value="20">2020</option>
+        <option value="21">2021</option>
+        <option value="22">2022</option>
+        </select>
+        <br />
+        <label for="year">Choose a variant: &nbsp;&nbsp;</label>
+
+        <select name="variant" id="variant">
+        <option value="1">Variant 1 (and all March papers)</option>
+        <option value="2">Variant 2</option>
+        <option value="3">Variant 3</option>
         </select>
         <br />
         <select name="type" id="type">
@@ -51,5 +90,10 @@
             </select>
             <br />
         <input type="submit" value="Submit" onclick="run()">
+
+        <br>
+        <br>
+        <p>Currently available:</p>
+        <li>Math Paper 5</li>
     </body>
 </html>
