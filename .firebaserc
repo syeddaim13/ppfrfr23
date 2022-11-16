@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "ppfrfr-68676"
+  },
+  "targets": {
+    "ppfrfr-68676": {
+      "hosting": {
+        "ppfrfr23": [
+          "ppfrfr23"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

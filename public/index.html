@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>23PPFRFR</title>
+        <script language="javascript">
+            function run() {
+                subject = document.getElementById("subject").value
+                paper = document.getElementById("paper").value
+                month = document.getElementById("month").value
+                year = document.getElementById("year").value
+                console.log(subject)
+
+                window.location.href = '/'+subject+'/'+paper+'/'+month+year+'.pdf';
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Welcome to 23PPFRFR made by your class for your class</h1>
+        <p>The most efficient past paper website.</p>
+        <label for="subject">Choose a subject:</label>
+
+        <select name="subject" id="subject">
+        <option value="Math">Math</option>
+        <option value="IT">Information Technology 9626</option>
+        </select>
+        <br />
+        <label for="paper">Choose a paper: &nbsp;&nbsp;</label>
+
+        <select name="paper" id="paper">
+        <option value="P3">Paper 3</option>
+        <option value="P4">Paper 4</option>
+        </select>
+        <br />
+        <label for="month">Choose a month: &nbsp;&nbsp;</label>
+
+        <select name="month" id="month">
+        <option value="march">March</option>
+        <option value="june">June</option>
+        <option value="november">November</option>
+        </select>
+        <br />
+        <label for="year">Choose a paper: &nbsp;&nbsp;</label>
+
+        <select name="year" id="year">
+        <option value="17">2017</option>
+        <option value="18">2018</option>
+        </select>
+        <br />
+        <input type="submit" value="Submit" onclick="run()">
+    </body>
+</html>

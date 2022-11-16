@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Strong Number</title>
+        <script language="javascript">
+            var num = parseInt(prompt("Enter a number you want to check"));
+			var storage = 1
+			var remainder
+			var temp = num
+			var value = num
+			var total = 0
+			var x = 1
+			
+			while(num>0)
+			{
+			remainder = num%10
+			while(remainder>0)
+				{	
+				storage = storage*x
+					x =  remainder--
+				}
+			document.write(storage+"<br />")
+			
+			total = total+storage
+			storage = 1
+			num=parseInt(num/10)
+			}
+			document.write("total: "+total+"<br />")
+			if (total==temp)
+			{
+				document.write("this number is a strong number according to lord Shaheer")
+			}
+			else	
+			{
+				document.write("this number is NOT a strong number according to lord Shaheer")
+			}
+
+        </script>
+    </head>
+</html>
