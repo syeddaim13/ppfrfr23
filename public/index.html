@@ -34,7 +34,26 @@
                         alert("Error in month switch. Please report this.");
                 }
                 console.log(subjectcode)
-                window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.pdf';
+
+                // temporary if condition for valid subjects start
+                if (subject != "Math") {
+                    alert("whatever you've picked isn't available yet.")
+                    location.reload()
+                }
+                else if (subject == "Math" && paper != '5') {
+                    alert("whatever you've picked isn't available yet.")
+                    location.reload()
+                }
+                //temporary if condition end
+
+
+                else if (monthcode == "m" && variant != "1") { //validate march variant
+                    alert("You want a March paper, yet picked a variant that is not equal to 1. This is shameful. We're redirecting you to variant 1 anyway.")
+                    window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+'1'+'.pdf';
+                } else {
+                    window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.pdf';
+                }
+                
                 
             }
         </script>
