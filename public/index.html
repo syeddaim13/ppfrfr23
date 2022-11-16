@@ -7,9 +7,10 @@
                 paper = document.getElementById("paper").value
                 month = document.getElementById("month").value
                 year = document.getElementById("year").value
+                type = document.getElementById("type").value
                 console.log(subject)
 
-                window.location.href = '/'+subject+'/'+paper+'/'+month+year+'.pdf';
+                window.location.href = '/'+subject+'/'+paper+'/'+month+year+type+'.pdf';
                 
             }
         </script>
@@ -46,6 +47,11 @@
         <option value="18">2018</option>
         </select>
         <br />
+        <select name="type" id="type">
+            <option value="qp">Question Paper</option>
+            <option value="ms">Marking Scheme</option>
+            </select>
+            <br />
         <input type="submit" value="Submit" onclick="run()">
     </body>
 </html>
