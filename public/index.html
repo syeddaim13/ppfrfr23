@@ -36,16 +36,33 @@
                 console.log(subjectcode)
 
                 // temporary if condition for valid subjects start
-                if (subject != "Math") {
-                    alert("whatever you've picked isn't available yet.")
+                if (subject != "Math" && subject != "IT") {
+                    alert("whatever you've picked isn't available yet. SUBERR")
                     location.reload()
                 }
                 else if (subject == "Math" && paper != '5') {
-                    alert("whatever you've picked isn't available yet.")
+                    alert("whatever you've picked isn't available yet. MATHPPRERR")
+                    location.reload()
+                }
+                else if (subject == "IT" && year != '22') {
+                    alert("whatever you've picked isn't available yet. ITPPRERR")
+                    location.reload()
+                }
+                else if (subject == "IT" && year != '21') {
+                    alert("whatever you've picked isn't available yet. ITPPRERR")
                     location.reload()
                 }
                 //temporary if condition end
-
+                else if (type == "sf" && subject != "IT") {
+                    alert("uhh....are you sure you want SOURCE FILES? smh non IT ppl.")  //check if IT & sf picked
+                }
+                else if (type == "sf" && monthcode == "m" && variant != "1") {
+                    alert("You're an IT student, but can't read the menu that TELLS YOU TO PICK VARIANT ONE FOR MARCH. try again.") //check if sf picked with march and non 1 variant
+                    location.reload()
+                }
+                else if (type == "sf") {
+                    window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.zip'; //link for sf
+                }
 
                 else if (monthcode == "m" && variant != "1") { //validate march variant
                     alert("You want a March paper, yet picked a variant that is not equal to 1. This is shameful. We're redirecting you to variant 1 anyway.")
@@ -106,6 +123,7 @@
         <select name="type" id="type">
             <option value="qp">Question Paper</option>
             <option value="ms">Marking Scheme</option>
+            <option value="sf">Source Files</option>
             </select>
             <br />
         <input type="submit" value="Submit" onclick="run()">
@@ -114,5 +132,6 @@
         <br>
         <p>Currently available:</p>
         <li>Math Paper 5</li>
+        <li>IT Paper 3 and 4 (2022 and 2021)</li>
     </body>
 </html>
