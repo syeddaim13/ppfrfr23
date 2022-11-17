@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>test animation</title>
+
+    </head>
+    <body>
+        <img src="pic (1).jpg" id="pic" height="600" width="400">
+    </body>
+    <script lang="javascript">
+        framenumber = 1
+        
+        while (framenumber <= 200 ) {
+           
+            document.getElementById("pic").src = "pic ("+framenumber+").jpg"
+        
+            framenumber++
+        }
+        location.reload()
+    </script>
+</html>
