@@ -40,17 +40,17 @@
                 // temporary if condition for valid subjects start
                 if (subject != "Math" && subject != "IT") {
                     alert("whatever you've picked isn't available yet. SUBERR")
-                    location.reload()
+
                 }
                 else if (subject == "Math" && paper != '5') {
                     alert("whatever you've picked isn't available yet. MATHPPRERR")
-                    location.reload()
+           
                 }
                 //temporary if condition end
                 else if (type == "sf" && subject != "IT") {
                     alert("uhh....are you sure you want SOURCE FILES? smh non IT ppl.")  //check if IT & sf picked
                 }
-                else if (type == "sf" && monthcode == "m" && variant != "1") {
+                else if (subject == "IT" && monthcode == "m" && variant != "2") {
                     alert("You're an IT student, but can't read the menu that TELLS YOU TO PICK VARIANT ONE FOR MARCH. try again.") //check if sf picked with march and non 1 variant
                     location.reload()
                 }
@@ -58,8 +58,8 @@
                     window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.zip'; //link for sf
                 }
 
-                else if (monthcode == "m" && variant != "1") { //validate march variant
-                    alert("You want a March paper, yet picked a variant that is not equal to 1. This is shameful. We're redirecting you to variant 1 anyway.")
+                else if (monthcode == "m" && variant != "2") { //validate march variant
+                    alert("You want a March paper, yet picked a variant that is not equal to 2. This is shameful. We're redirecting you to variant 2 anyway.")
                     window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+'1'+'.pdf';
                 } else {
                     window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.pdf';
@@ -113,8 +113,8 @@
         <label for="year">Choose a variant: &nbsp;&nbsp;</label>
 
         <select name="variant" id="variant">
-        <option value="1">Variant 1 (and all March papers)</option>
-        <option value="2">Variant 2</option>
+        <option value="1">Variant 1</option>
+        <option value="2">Variant 2 (and all March papers)</option>
         <option value="3">Variant 3</option>
         </select>
         <br />
