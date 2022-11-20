@@ -44,8 +44,13 @@ function run() {
             alert("Error in month switch. Please report this.");
     }
     console.log(subjectcode)
-// special cases
-    if (type == "sf" && subject == "IT" && year == "17" && monthcode == "m") {
+//paper validation
+    if (subject == "IT" && paper == "5") {
+        alert("The chosen subject does not have a paper pertaining to this value.")
+    }
+//paper validation end
+    // special cases
+    else if (type == "sf" && subject == "IT" && year == "17" && monthcode == "m") {
         window.location.href = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+year+'_'+"SF"+'_'+paper+'.zip'; //link for sf 2017 march
     }
 // end special cases
@@ -131,8 +136,13 @@ function newtab() {
             alert("Error in month switch. Please report this.");
     }
     console.log(subjectcode)
-// special cases
-    if (type == "sf" && subject == "IT" && year == "17" && monthcode == "m") {
+//paper validation
+    if (subject == "IT" && paper == "5") {
+        alert("The chosen subject does not have a paper pertaining to this value.")
+    }
+//paper validation end
+    // special cases
+    else if (type == "sf" && subject == "IT" && year == "17" && monthcode == "m") {
     window.location.href = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+year+'_'+"SF"+'_'+paper+'.zip'; //link for sf 2017 march
     }
 // end special cases
