@@ -9,9 +9,23 @@ function run() {
     switch (subject) {
         case "Math":
             subjectcode = "9709"
+            subjectlink = "Mathematics%20(9709)"
             break;
         case "IT":
             subjectcode = "9626"
+            subjectlink = "Information%20Technology%20(9626)"
+            break;
+        case "Chemistry":
+            subjectcode = "9701"
+            subjectlink = "Chemistry%20(9701)"
+            break;
+        case "Physics":
+            subjectcode = "9702"
+            subjectlink = "Physics%20(9702)"
+            break;
+        case "Biology":
+            subjectcode = "9700"
+            subjectlink = "Biology%20(9700)"
             break;
         default:
             alert("Error in switch. Please report this.");
@@ -41,22 +55,27 @@ function run() {
     }
 
     else if (type == "sf") {
-        window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+"04"+'.zip'; //link for sf
+        window.location.href = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.zip'; //link for sf
     }
 
+    else if (subject == "IT" && paper == "4" && type == "qp" && year == "17") {
+        window.location.href = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+'4'+'.pdf';
+        //link for IT p4 qp in 2017
+    }
     else if (subject == "IT" && paper == "4" && type == "qp") {
-        window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+"04"+'.pdf'; //link for IT p4 qp
+        window.location.href = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+'04'+'.pdf';
+        //link for IT p4 qp after 2017
     }
 
     else if (subject == "IT" && paper == "4" && type == "ms") {
-        window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+"4"+'.pdf'; //link for IT p4 ms
+        window.location.href = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+'4'+'.pdf'; //link for IT p4 ms
     }
 
     else if (monthcode == "m" && variant != "2") { //validate march variant
         alert("You want a March paper, yet picked a variant that is not equal to 2. This is shameful. We're redirecting you to variant 2 anyway.")
-        window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+'2'+'.pdf';
+        window.location.href = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+'2'+'.pdf';
     } else {
-        window.location.href = '/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.pdf';
+        window.location.href = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.pdf';
     }
     
     
@@ -73,9 +92,23 @@ function newtab() {
     switch (subject) {
         case "Math":
             subjectcode = "9709"
+            subjectlink = "Mathematics%20(9709)"
             break;
         case "IT":
             subjectcode = "9626"
+            subjectlink = "Information%20Technology%20(9626)"
+            break;
+        case "Chemistry":
+            subjectcode = "9701"
+            subjectlink = "Chemistry%20(9701)"
+            break;
+        case "Physics":
+            subjectcode = "9702"
+            subjectlink = "Physics%20(9702)"
+            break;
+        case "Biology":
+            subjectcode = "9700"
+            subjectlink = "Biology%20(9700)"
             break;
         default:
             alert("Error in switch. Please report this.");
@@ -105,22 +138,27 @@ function newtab() {
     }
 
     else if (type == "sf") {
-        window.open('/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+"04"+'.zip'); //link for sf
+        window.open('https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.zip'); //link for sf
+    }
+
+    else if (subject == "IT" && paper == "4" && type == "qp" && year == "17") {
+        window.open('https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+'4'+'.pdf');
+        //link for IT p4 qp in 2017
     }
 
     else if (subject == "IT" && paper == "4" && type == "qp") {
-        window.open('/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+"04"+'.pdf'); //link for IT p4 qp
+        window.open('https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+'04'+'.pdf'); //link for IT p4 qp
     }
 
     else if (subject == "IT" && paper == "4" && type == "ms") {
-        window.open('/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+"4"+'.pdf'); //link for IT p4 ms
+        window.open('https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+'4'+'.pdf'); //link for IT p4 ms
     }
 
     else if (monthcode == "m" && variant != "2") { //validate march variant
         alert("You want a March paper, yet picked a variant that is not equal to 2. This is shameful. We're redirecting you to variant 2 anyway.")
-        window.open('/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+'2'+'.pdf');
+        window.open('https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+'2'+'.pdf');
     } else {
-        window.open('/'+subject+'/'+paper+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.pdf');
+        window.open('https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.pdf');
     }
     
     
