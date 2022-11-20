@@ -1,3 +1,5 @@
+const { type } = require("superagent/lib/utils")
+
 function run() {
     subject = document.getElementById("subject").value
     paper = document.getElementById("paper").value
@@ -45,7 +47,7 @@ function run() {
     }
     console.log(subjectcode)
 // special cases
-    if (type = "sf" && subject == "IT" && year == "17" && monthcode == "m") {
+    if (type == "sf" && subject == "IT" && year == "17" && monthcode == "m") {
         window.location.href = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+year+'_'+"SF"+'_'+paper+'.zip'; //link for sf 2017 march
     }
 // end special cases
@@ -144,7 +146,7 @@ function newtab() {
     }
     console.log(subjectcode)
 // special cases
-    if (type = "sf" && subject == "IT" && year == "17" && monthcode == "m") {
+    if (type == "sf" && subject == "IT" && year == "17" && monthcode == "m") {
     window.location.href = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+year+'_'+"SF"+'_'+paper+'.zip'; //link for sf 2017 march
     }
 // end special cases
