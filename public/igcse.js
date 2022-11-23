@@ -87,7 +87,7 @@ function run() {
     }
     yearval = parseInt(year)
     if (monthcode == "m" && yearval < 17) {
-        alert("March papers weren't fully available before 2017, and are therefore not supported.")
+        alert("March papers weren't fully available before 2017, so this may lead to a dead end.")
     }
     if (year == "22" && monthcode == "w") {
         alert("November papers aren't available yet.")
@@ -248,7 +248,7 @@ function newtab() {
     }
     yearval = parseInt(year)
     if (monthcode == "m" && yearval < 17) {
-        alert("March papers weren't fully available before 2017, and are therefore not supported.")
+        alert("March papers weren't fully available before 2017, so this may lead to a dead end.")
     }
     if (year == "22" && monthcode == "w") {
         alert("November papers aren't available yet.")
