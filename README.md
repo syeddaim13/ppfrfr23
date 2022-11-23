@@ -1,5 +1,5 @@
 # Past Papers For Real For Real
-##### ...brought to you by AIS' batch of 2023.
+##### ...brought to you by AIS' batch of 2023 and aisl-
 
 
 ## How to
@@ -12,7 +12,7 @@
 ## Features
 
 - Cambridge International A Level pastpapers
-- Cambridge International GCSE pastpapers WIP
+- Cambridge International GCSE pastpapers
 - Not all subjects are supported.
 
 
