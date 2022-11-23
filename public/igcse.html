@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Batch of 23' Past Papers</title>
+        <title>Batch of 23' Past Papers (IG)</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
         <script lang="javascript" src="igcse.js">
@@ -8,12 +8,12 @@
     </head>
     <body>
         <h1>Welcome to 23PPFRFR - IGCSE Edition.</h1>
-        <p>The most efficient CIE IGCSE past paper front end.</p>
+        <p>The most efficient<sup>#</sup> CIE IGCSE past paper front end.</p>
         <label for="subject">Choose a subject:&nbsp;</label>
 
         <select name="subject" id="subject">
         <option value="igAccounting">Accounting 0452/0985</option>
-        <option value="igArabic">Arabic First Language 0508/7184</option>
+        <!--- <option value="igArabic">Arabic First Language 0508/7184</option> --->
         <option value="igBiology">Biology 0610/0970</option>
         <option value="igBusiness">Business Studies 0450/0986</option>
         <option value="igChemistry">Chemistry 0620/0986</option>
@@ -24,6 +24,7 @@
         <option value="igMath">Mathematics 0580/0980</option>
         <option value="igPhysics">Physics 0625/0972</option>
         </select>
+        <br>
         <br />
         <label for="paper">Choose a paper: &nbsp;&nbsp;</label>
 
@@ -36,6 +37,7 @@
         <option value="6">Paper 6</option>
         </select>
         <br />
+        <br>
         <label for="month">Choose a month:&nbsp;&nbsp;</label>
 
         <select name="month" id="month">
@@ -44,13 +46,10 @@
         <option value="november">November</option>
         </select>
         <br />
+        <br>
         <label for="year">Choose a year: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
 
         <select name="year" id="year">
-        <option value="10">2010</option>
-        <option value="11">2011</option>
-        <option value="12">2012</option>
-        <option value="13">2013</option>
         <option value="14">2014</option>
         <option value="15">2015</option>
         <option value="16">2016</option>
@@ -62,6 +61,7 @@
         <option value="22" selected >2022</option>
         </select>
         <br />
+        <br>
         <label for="year">Choose a variant*:</label>
 
         <select name="variant" id="variant">
@@ -70,23 +70,29 @@
         <option value="3">Variant 3</option>
         </select>
         <br />
+        <br>
         <select name="type" id="type">
             <option value="qp">Question Paper</option>
             <option value="ms">Marking Scheme</option>
-            <option value="sf">Source Files</option>
+            <option value="sf">Source Files & Audio Files</option>
             </select>
-            <br />
-        <input type="submit" value="Get paper" onclick="run()"> <input type="submit" value="Get paper (new tab) NON FUNCTIONAL" onclick="newtab()"> 
+        <br /> 
+        <br>
+        <input type="submit" value="Get paper" onclick="run()"> <input type="submit" value="Get paper (new tab)" onclick="newtab()"> 
 
         <br>
         <br>
         Footnotes: <br>
+        <li>All papers use the A*-G grading scale.</li>
         <li>*Please select Variant 2 for March exam papers.</li>
         <li>**All English papers use the 0510 subject code.</li>
-        <li>All papers use the A*-G grading scale.</li>
+        <br>
+        <li><sup>#</sup>The authenticity of this claim may vary.</li>
         <br> &copy; Syed Ali Daim && Shaheer Muhammad Arif
         <br>
         <br> To report a problem, click <a href="https://wa.link/xkzk2s">here.</a>
-        
+        <br> Open sourced website code is available <a href="https://github.com/syeddaim13/ppfrfr23"> here.</a>
+        <br> <br>
+        <a href="/index.html">Looking for A Level past papers?</a>
     </body>
 </html>
