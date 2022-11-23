@@ -1,5 +1,5 @@
 # Past Papers For Real For Real
-##### ...brought to you by AIS' batch of 2023 and aisl-
+##### ...brought to you by AIS' class of 2023.
 
 
 ## How to
