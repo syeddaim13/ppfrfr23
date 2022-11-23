@@ -109,7 +109,7 @@ function run() {
   
 
     else if (subject == "igICT" && paper != "1") {
-        alert("We're sorry but you'll have to get this file yourself. Cambridge keeps changing the paper format. We're redirecting you to the year page.")
+        alert("We're sorry but you'll have to get this file yourself. Cambridge keeps changing the paper format. We're redirecting you to the year page. This is still an error, so please report it.")
         window.location.href = 'https://papers.gceguide.com/Cambridge%20IGCSE/'+subjectlink+'/20'+year; //giveup.jpg
     }
 
@@ -270,7 +270,7 @@ function newtab() {
   
 
     else if (subject == "igICT" && paper != "1") {
-        alert("We're sorry but you'll have to get this file yourself. Cambridge keeps changing the paper format. We're redirecting you to the year page.")
+        alert("We're sorry but you'll have to get this file yourself. Cambridge keeps changing the paper format. We're redirecting you to the year page. This is still an error, so please report it.")
         window.open('https://papers.gceguide.com/Cambridge%20IGCSE/'+subjectlink+'/20'+year); //giveup.jpg
     }
 
