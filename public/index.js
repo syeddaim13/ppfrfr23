@@ -48,6 +48,9 @@ function run() {
     if (subject == "IT" && paper == "5") {
         alert("The chosen subject does not have a paper pertaining to this value.")
     }
+    if (year == "22" && monthcode == "w") {
+        alert("November papers aren't available yet.")
+    }
 //paper validation end
     // special cases
     else if (type == "sf" && subject == "IT" && year == "17" && monthcode == "m") {
@@ -139,6 +142,9 @@ function newtab() {
 //paper validation
     if (subject == "IT" && paper == "5") {
         alert("The chosen subject does not have a paper pertaining to this value.")
+    }
+    if (year == "22" && monthcode == "w") {
+        alert("November papers aren't available yet.")
     }
 //paper validation end
     // special cases
