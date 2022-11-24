@@ -62,6 +62,10 @@ function run() {
     }
     if (year == "22" && monthcode == "w") {
         alert("November papers aren't available yet.")
+        
+    }
+    else if (type == "sf" && sfeligible == false ) {
+        alert("Source files and/or insert files aren't available for "+subject+".")  //validate sf subject
     }
 //paper validation end
     // special cases
@@ -71,13 +75,17 @@ function run() {
 // end special cases
 
     //IT
-    else if (type == "sf" && sfeligible == false ) {
-        alert("Source files and/or insert files aren't available for "+subject+".")  //validate sf subject
+    else if(paper == "3" || paper == "4") {
+        ITsfEligible = true;
     }
 
     else if (subject == "IT" && monthcode == "m" && variant != "2") {
         alert("You're an IT student, but can't read the menu that TELLS YOU TO PICK VARIANT TWO FOR MARCH. try again.") //check if sf picked with march and non 1 variant
         location.reload()
+    }
+
+    else if (subject == "IT" && type == "sf" && ITsfEligible == false) {
+        alert("Source files are only available for papers 3 and 4.")
     }
 
     else if (type == "sf" && subject == "IT") {
