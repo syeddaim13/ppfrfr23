@@ -60,9 +60,7 @@ function run() {
     if (papervalue > maxpapers) {
         alert("The chosen subject does not have a paper pertaining to this value.")
     }
-    if (year == "22" && monthcode == "w") {
-        alert("November papers aren't available yet.")
-    }
+
 //paper validation end
     // special cases
     else if (type == "sf" && subject == "IT" && year == "17" && monthcode == "m") {
@@ -189,9 +187,7 @@ function newtab() {
     if (papervalue > maxpapers) {
         alert("The chosen subject does not have a paper pertaining to this value.")
     }
-    if (year == "22" && monthcode == "w") {
-        alert("November papers aren't available yet.")
-    }
+
 //paper validation end
     // special cases
     else if (type == "sf" && subject == "IT" && year == "17" && monthcode == "m") {
