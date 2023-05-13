@@ -23,17 +23,20 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  color: white;
+
 }
 
 h1, p, label, select, input, ul, li {
   text-align: center;
+  color: white;
 }
 
 
 body {
   font-family: "SFUIDisplay-Light", sans-serif;
   line-height: 1.5;
-  background-color: #f5f5f5;
+  background-color: black;
   color: #333333;
 }
 
@@ -56,25 +59,28 @@ label {
 
 select,
 input[type="submit"] {
-  font-size: 16px;
+  font-size: 13px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #cccccc;
   background-color: #ffffff;
-  margin-bottom: 10px;
+  margin-bottom: 10px; 
   width: 100%;
   max-width: 300px;
+  color: black;
+
 }
 
 input[type="submit"] {
   cursor: pointer;
-  background-color: #4caf50;
+  
+  background-color: #1e90ff;
   color: #ffffff;
   border: none;
 }
 
 input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #4169e1;
 }
 
 ul {
@@ -88,15 +94,42 @@ li {
 }
 
 a {
-    color: #337ab7;
+    color: #437fb4;
 }
 
 a:hover {
   text-decoration: underline;
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .column {
+    flex: 1;
+    margin-right: 20px;
+    margin: 0 10px;
+  }
+
+  table {
+    table-layout:flex;
+    width: 100%;
+  }
+
+  table td {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  option {
+    font-size: 10px;
+  }
         </style>
     </head>
     <body style="font-family: SFUIDisplay-Light,sans-serif">
+        <div class="container">
+            <div class="column">
         
             <h1>Welcome to 23PPFRFR - A Levels Edition.</h1>
             <p>The most efficient<sup>#</sup> CIE A Level past paper front end.</p>
@@ -178,6 +211,9 @@ a:hover {
                   </select>
                 </td>
               </tr>
+              <tr>
+                
+              </tr>
             </table>
           
             <br>
@@ -187,20 +223,33 @@ a:hover {
           
             <br>
             <br>
-            Footnotes: <br>
+        </div>
+        
+        
+
+        <div class="column">
+            <h3 style="text-align: center; color: white;"> Footnotes: </h3>
             <ul>
               <li>* Please select Variant 2 for March exam papers.</li>
               <li><sup>#</sup>The authenticity of this claim may vary.</li>
             </ul>
-            <br>
+          </div>
+        </div>
+          
+            <div class="container">
+              <div class="column">
             &copy; Syed Ali Daim &amp; Shaheer Muhammad Arif
+              </div>
             <br>
             <br> 
+            <div class="column">
             <div> To report a problem, click <a href="https://wa.link/xkzk2s">here.</a> </div>
-            <div> Open sourced website code is available <a href="https://github.com/syeddaim13/ppfrfr23"> here.</a></div>
+            <div> Open sourced website code is available <a href="https://github.com/syeddaim13/ppfrfr23">here.</a>
+            </div>
             <br>
             <a href="/igcse.html">Looking for IGCSE past papers?</a>
-          
+            </div>
+            </div>
            
           
     </body>
