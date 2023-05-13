@@ -11,94 +11,196 @@
             src: url(SFUIDisplay-Light.ttf);
             }
          
-            select{
-                font-size: medium;
-                font-family: "SFUIDisplay-Light", sans-serif;
+body, h1, p, label, select, input, ul {
+  margin: 0;
+  padding: 0;
+}
 
-            }
-            input {
-                font-family: "SFUIDisplay-Light", sans-serif;
-                font-size: medium;
-            }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1, p, label, select, input, ul, li {
+  text-align: center;
+}
+
+
+body {
+  font-family: "SFUIDisplay-Light", sans-serif;
+  line-height: 1.5;
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+h1 {
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+select,
+input[type="submit"] {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+a {
+    color: #337ab7;
+}
+
+a:hover {
+  text-decoration: underline;
+}
         </style>
     </head>
     <body style="font-family: SFUIDisplay-Light,sans-serif">
-        <h1>Welcome to 23PPFRFR - A Levels Edition.</h1>
-        <p>The most efficient<sup>#</sup> CIE A Level past paper front end.</p>
-        <label for="subject">Choose a subject:&nbsp;</label>
-
-        <select name="subject" id="subject">
-        <option value="Math">Mathematics 9709</option>
-        <option value="IT">Information Technology 9626</option>
-        <option value="Physics">Physics 9702</option>
-        <option value="Chemistry">Chemistry 9701</option>
-        <option value="Biology">Biology 9700</option>
-        <option value="Business">Business 6909</option>
-        </select>
-        <br />
-        <br />
-        <label for="paper">Choose a paper: &nbsp;&nbsp;</label>
-        <select name="paper" id="paper">
-        <option value="1">Paper 1</option>
-        <option value="2">Paper 2</option>
-        <option value="3">Paper 3</option>
-        <option value="4">Paper 4</option>
-        <option value="5">Paper 5</option>
-        </select>
-        <br />
-        <br />
-        <label for="month">Choose a month:&nbsp;&nbsp;</label>
-        <select name="month" id="month">
-        <option value="march">March</option>
-        <option value="june">June</option>
-        <option value="november">November</option>
-        </select>
-        <br />
-        <br />
-        <label for="year">Choose a year: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-
-        <select name="year" id="year">
-        <option value="17">2017</option>
-        <option value="18">2018</option>
-        <option value="19">2019</option>
-        <option value="20">2020</option>
-        <option value="21">2021</option>
-        <option value="22">2022</option>
-        </select>
-        <br />
-        <br />
-        <label for="year">Choose a variant*:</label>
-
-        <select name="variant" id="variant">
-        <option value="1">Variant 1</option>
-        <option value="2">Variant 2 (and all March papers)</option>
-        <option value="3">Variant 3</option>
-        </select>
-        <br />
-        <br />
-        <select name="type" id="type">
-            <option value="qp">Question Paper</option>
-            <option value="ms">Marking Scheme</option>
-            <option value="sf">Source Files & Inserts</option>
-            </select>
-        <br />
-        <br />
-
-        <input type="submit" value="Get paper" onclick="run()"> <input type="submit" value="Get paper (new tab)" onclick="newtab()"> 
-
-        <br>
-        <br>
-        Footnotes: <br>
-        <li>* Please select Variant 2 for March exam papers.</li>
-        <br>
-        <li><sup>#</sup>The authenticity of this claim may vary.</li>
-        <br> &copy; Syed Ali Daim && Shaheer Muhammad Arif
-        <br>
-        <br> To report a problem, click <a href="https://wa.link/xkzk2s">here.</a>
-        <br> Open sourced website code is available <a href="https://github.com/syeddaim13/ppfrfr23"> here.</a>
-        <br> <br>
-        <a href="/igcse.html">Looking for IGCSE past papers?</a>
         
-        
+            <h1>Welcome to 23PPFRFR - A Levels Edition.</h1>
+            <p>The most efficient<sup>#</sup> CIE A Level past paper front end.</p>
+          
+            <table>
+              <tr>
+                <td>
+                  <label for="subject">Choose a subject:</label>
+                </td>
+                <td>
+                  <label for="paper">Choose a paper:</label>
+                </td>
+                <td>
+                  <label for="month">Choose a month:</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <select name="subject" id="subject">
+                    <option value="Math">Mathematics 9709</option>
+                    <option value="IT">Information Technology 9626</option>
+                    <option value="Physics">Physics 9702</option>
+                    <option value="Chemistry">Chemistry 9701</option>
+                    <option value="Biology">Biology 9700</option>
+                    <option value="Business">Business 6909</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="paper" id="paper">
+                    <option value="1">Paper 1</option>
+                    <option value="2">Paper 2</option>
+                    <option value="3">Paper 3</option>
+                    <option value="4">Paper 4</option>
+                    <option value="5">Paper 5</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="month" id="month">
+                    <option value="march">March</option>
+                    <option value="june">June</option>
+                    <option value="november">November</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="year">Choose a year:</label>
+                </td>
+                <td>
+                  <label for="variant">Choose a variant*:</label>
+                </td>
+                <td>
+                  <label for="type">Choose a type:</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <select name="year" id="year">
+                    <option value="17">2017</option>
+                    <option value="18">2018</option>
+                    <option value="19">2019</option>
+                    <option value="20">2020</option>
+                    <option value="21">2021</option>
+                    <option value="22">2022</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="variant" id="variant">
+                    <option value="1">Variant 1</option>
+                    <option value="2">Variant 2 (and all March papers)</option>
+                    <option value="3">Variant 3</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="type" id="type">
+                    <option value="qp">Question Paper</option>
+                    <option value="ms">Marking Scheme</option>
+                    <option value="sf">Source Files & Inserts</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          
+            <br>
+          
+            <input type="submit" value="Get paper" onclick="run()">
+            <input type="submit" value="Get paper (new tab)" onclick="newtab()">
+          
+            <br>
+            <br>
+            Footnotes: <br>
+            <ul>
+              <li>* Please select Variant 2 for March exam papers.</li>
+              <li><sup>#</sup>The authenticity of this claim may vary.</li>
+            </ul>
+            <br>
+            &copy; Syed Ali Daim &amp; Shaheer Muhammad Arif
+            <br>
+            <br> 
+            <div> To report a problem, click <a href="https://wa.link/xkzk2s">here.</a> </div>
+            <div> Open sourced website code is available <a href="https://github.com/syeddaim13/ppfrfr23"> here.</a></div>
+            <br>
+            <a href="/igcse.html">Looking for IGCSE past papers?</a>
+          
+           
+          
     </body>
 </html>
