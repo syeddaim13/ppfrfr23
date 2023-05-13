@@ -74,8 +74,7 @@ function run() {
     }
 
     else if (subject == "IT" && monthcode == "m" && variant != "2") {
-        alert("You're an IT student, but can't read the menu that TELLS YOU TO PICK VARIANT TWO FOR MARCH. try again.") //check if sf picked with march and non 1 variant
-        location.reload()
+        alert("Please select Variant 2.") //check if sf picked with march and non 1 variant
     }
 
     else if (type == "sf" && subject == "IT") {
