@@ -1,265 +1,259 @@
 <html lang="en-gb">
-    <head>
-        <meta charset="utf-8">
-        <title>Batch of 23' Past Papers (AL)</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
-        <script lang="javascript" src="index.js">
-        </script>
-        <style> 
-              @font-face {
-            font-family: "SFUIDisplay-Light", sans-serif;
-            src: url(SFUIDisplay-Light.ttf);
-            }
-         
-body, h1, p, label, select, input, ul {
-  margin: 0;
-  padding: 0;
-}
+  <head>
+    <meta charset="utf-8" />
+    <title>Batch of 23' Past Papers (AL)</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png" />
+    <script lang="javascript" src="index.js"></script>
+    <style>
+                    @font-face {
+                  font-family: "SFUIDisplay-Light", sans-serif;
+                  src: url(SFUIDisplay-Light.ttf);
+                  }
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  color: white;
+      body, h1, p, label, select, input, ul {
+        margin: 0;
+        padding: 0;
+      }
 
-}
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        color: white;
 
-h1, p, label, select, input, ul, li {
-  text-align: center;
-  color: white;
-}
+      }
+
+      h1, p, label, select, input, ul, li {
+        text-align: center;
+        color: white;
+      }
 
 
-body {
-  font-family: "SFUIDisplay-Light", sans-serif;
-  line-height: 1.5;
-  background-color: black;
-  color: #333333;
-}
+      body {
+        font-family: "SFUIDisplay-Light", sans-serif;
+        line-height: 1.5;
+        background-color: black;
+        color: #333333;
+      }
 
-h1 {
-  font-size: 28px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
+      h1 {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
 
-p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
 
-label {
-  font-size: 16px;
-  display: block;
-  margin-bottom: 5px;
-}
+      label {
+        font-size: 16px;
+        display: block;
+        margin-bottom: 5px;
+      }
 
-select,
-input[type="submit"] {
-  font-size: 13px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #cccccc;
-  background-color: #ffffff;
-  margin-bottom: 10px; 
-  width: 100%;
-  max-width: 300px;
-  color: black;
+      select,
+      input[type="submit"] {
+        font-size: 13px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
+        background-color: #ffffff;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 300px;
+        color: black;
 
-}
+      }
 
-input[type="submit"] {
-  cursor: pointer;
-  
-  background-color: #1e90ff;
-  color: #ffffff;
-  border: none;
-}
+      input[type="submit"] {
+        cursor: pointer;
 
-input[type="submit"]:hover {
-  background-color: #4169e1;
-}
+        background-color: #1e90ff;
+        color: #ffffff;
+        border: none;
+      }
 
-ul {
-  list-style-type: none;
-  margin-bottom: 20px;
-}
+      input[type="submit"]:hover {
+        background-color: #4169e1;
+      }
 
-li {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
+      ul {
+        list-style-type: none;
+        margin-bottom: 20px;
+      }
 
-a {
-    color: #437fb4;
-}
+      li {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
 
-a:hover {
-  text-decoration: underline;
-}
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+      a {
+          color: #437fb4;
+      }
 
-  .column {
-    flex: 1;
-    margin-right: 20px;
-    margin: 0 10px;
-  }
+      a:hover {
+        text-decoration: underline;
+      }
+      .container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
 
-  table {
-    table-layout:flex;
-    width: 100%;
-  }
+        .column {
+          flex: 1;
+          margin-right: 20px;
+          margin: 0 10px;
+        }
 
-  table td {
-    white-space: nowrap;
-    overflow: hidden;
-  }
+        table {
+          table-layout:flex;
+          width: 100%;
+        }
 
-  option {
-    font-size: 10px;
-  }
-  @media (max-width: 600px) {
-    .container {
-      text-align: left;
-    }
+        table td {
+          white-space: nowrap;
+          overflow: hidden;
+        }
 
-    .button-container {
-      margin-top: 10px;
-    }
-  }
-        </style>
-    </head>
-    <body style="font-family: SFUIDisplay-Light,sans-serif">
-        <div class="container">
-            <div class="column">
-        
-            <h1>Welcome to 23PPFRFR - A Levels Edition.</h1>
-            <p>The most efficient<sup>#</sup> CIE A Level past paper front end.</p>
-          
-            <table>
-              <tr>
-                <td>
-                  <label for="subject">Choose a subject:</label>
-                </td>
-                <td>
-                  <label for="paper">Choose a paper:</label>
-                </td>
-                <td>
-                  <label for="month">Choose a month:</label>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <select name="subject" id="subject">
-                    <option value="Math">Mathematics 9709</option>
-                    <option value="IT">Information Technology 9626</option>
-                    <option value="Physics">Physics 9702</option>
-                    <option value="Chemistry">Chemistry 9701</option>
-                    <option value="Biology">Biology 9700</option>
-                    <option value="Business">Business 6909</option>
-                  </select>
-                </td>
-                <td>
-                  <select name="paper" id="paper">
-                    <option value="1">Paper 1</option>
-                    <option value="2">Paper 2</option>
-                    <option value="3">Paper 3</option>
-                    <option value="4">Paper 4</option>
-                    <option value="5">Paper 5</option>
-                  </select>
-                </td>
-                <td>
-                  <select name="month" value="june" id="month">
-                    <option value="march">March</option>
-                    <option selected value="june">June</option>
-                    <option value="november">November</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label for="year">Choose a year:</label>
-                </td>
-                <td>
-                  <label for="variant">Choose a variant*:</label>
-                </td>
-                <td>
-                  <label for="type">Choose a type:</label>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <select name="year" value="22" id="year">
-                    <option value="17">2017</option>
-                    <option value="18">2018</option>
-                    <option value="19">2019</option>
-                    <option value="20">2020</option>
-                    <option value="21">2021</option>
-                    <option selected value="22">2022</option>
-                  </select>
-                </td>
-                <td>
-                  <select name="variant" id="variant">
-                    <option value="1">Variant 1</option>
-                    <option value="2">Variant 2 (and all March papers)</option>
-                    <option value="3">Variant 3</option>
-                  </select>
-                </td>
-                <td>
-                  <select name="type" id="type">
-                    <option value="qp">Question Paper</option>
-                    <option value="ms">Marking Scheme</option>
-                    <option value="sf">Source Files & Inserts</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                
-              </tr>
-            </table>
-          
-            <br>
-          
-            <input type="submit" value="Get paper" onclick="run()">
-            <input type="submit" value="Get paper (new tab)" onclick="newtab()">
-          
-            <br>
-            <br>
+        option {
+          font-size: 10px;
+        }
+        @media (max-width: 600px) {
+          .container {
+            text-align: left;
+          }
+
+          .button-container {
+            margin-top: 10px;
+          }
+        }
+    </style>
+  </head>
+  <body style="font-family: SFUIDisplay-Light,sans-serif">
+    <div class="container">
+      <div class="column">
+        <h1>Welcome to 23PPFRFR - A Levels Edition.</h1>
+        <p>The most efficient<sup>#</sup> CIE A Level past paper front end.</p>
+
+        <table>
+          <tr>
+            <td>
+              <label for="subject">Choose a subject:</label>
+            </td>
+            <td>
+              <label for="paper">Choose a paper:</label>
+            </td>
+            <td>
+              <label for="month">Choose a month:</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select name="subject" id="subject">
+                <option value="Math">Mathematics 9709</option>
+                <option value="IT">Information Technology 9626</option>
+                <option value="Physics">Physics 9702</option>
+                <option value="Chemistry">Chemistry 9701</option>
+                <option value="Biology">Biology 9700</option>
+                <option value="Business">Business 6909</option>
+              </select>
+            </td>
+            <td>
+              <select name="paper" id="paper">
+                <option value="1">Paper 1</option>
+                <option value="2">Paper 2</option>
+                <option value="3">Paper 3</option>
+                <option value="4">Paper 4</option>
+                <option value="5">Paper 5</option>
+              </select>
+            </td>
+            <td>
+              <select name="month" value="june" id="month">
+                <option value="march">March</option>
+                <option selected value="june">June</option>
+                <option value="november">November</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="year">Choose a year:</label>
+            </td>
+            <td>
+              <label for="variant">Choose a variant*:</label>
+            </td>
+            <td>
+              <label for="type">Choose a type:</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select name="year" value="22" id="year">
+                <option value="17">2017</option>
+                <option value="18">2018</option>
+                <option value="19">2019</option>
+                <option value="20">2020</option>
+                <option value="21">2021</option>
+                <option selected value="22">2022</option>
+              </select>
+            </td>
+            <td>
+              <select name="variant" id="variant">
+                <option value="1">Variant 1</option>
+                <option value="2">Variant 2 (and all March papers)</option>
+                <option value="3">Variant 3</option>
+              </select>
+            </td>
+            <td>
+              <select name="type" id="type">
+                <option value="qp">Question Paper</option>
+                <option value="ms">Marking Scheme</option>
+                <option value="sf">Source Files & Inserts</option>
+              </select>
+            </td>
+          </tr>
+          <tr></tr>
+        </table>
+
+        <br />
+
+        <input type="submit" value="Get paper" onclick="run()" />
+        <input type="submit" value="Get paper (new tab)" onclick="newtab()" />
+
+        <br />
+        <br />
+      </div>
+
+      <div class="column">
+        <h3 style="text-align: center; color: white;">Footnotes:</h3>
+        <ul>
+          <li>* Please select Variant 2 for March exam papers.</li>
+          <li><sup>#</sup>The authenticity of this claim may vary.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="column">&copy; Syed Ali Daim &amp; Shaheer Muhammad Arif</div>
+      <br />
+      <br />
+      <div class="column">
+        <div>
+          To report a problem, click <a href="https://wa.link/xkzk2s">here.</a>
         </div>
-        
-        
-
-        <div class="column">
-            <h3 style="text-align: center; color: white;"> Footnotes: </h3>
-            <ul>
-              <li>* Please select Variant 2 for March exam papers.</li>
-              <li><sup>#</sup>The authenticity of this claim may vary.</li>
-            </ul>
-          </div>
+        <div>
+          Open sourced website code is available
+          <a href="https://github.com/syeddaim13/ppfrfr23">here.</a>
         </div>
-          
-            <div class="container">
-              <div class="column">
-            &copy; Syed Ali Daim &amp; Shaheer Muhammad Arif
-              </div>
-            <br>
-            <br> 
-            <div class="column">
-            <div> To report a problem, click <a href="https://wa.link/xkzk2s">here.</a> </div>
-            <div> Open sourced website code is available <a href="https://github.com/syeddaim13/ppfrfr23">here.</a>
-            </div>
-            <br>
-            <a href="igcse.html">Looking for IGCSE past papers?</a>
-            </div>
-            </div>
-           
-          
-    </body>
+        <br />
+        <a href="igcse.html">Looking for IGCSE past papers?</a>
+      </div>
+    </div>
+  </body>
 </html>
