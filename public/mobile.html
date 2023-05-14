@@ -1,0 +1,234 @@
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8" />
+    <title>Batch of 23' Past Papers (AL)</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png" />
+    <script lang="javascript" src="index.js"></script>
+    
+    <style>
+      @font-face {
+        font-family: "SFUIDisplay-Light", sans-serif;
+        src: url(SFUIDisplay-Light.ttf);
+      }
+
+      body,
+      h1,
+      p,
+      label,
+      select,
+      input,
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "SFUIDisplay-Light", sans-serif;
+        line-height: 1.5;
+        background-color: black;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      h1,
+      p,
+      label,
+      select,
+      input,
+      ul,
+      li {
+        text-align: center;
+        color: white;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+
+      label {
+        font-size: 26px;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      select,
+      input[type="submit"] {
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 8px;
+        border: 2px solid #cccccc;
+        background-color: #ffffff;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 400px;
+        color: black;
+      }
+
+      input[type="submit"] {
+        cursor: pointer;
+        background-color: #1e90ff;
+        color: #ffffff;
+        border: none;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #4169e1;
+      }
+
+      ul {
+        list-style-type: none;
+        margin-bottom: 30px;
+      }
+
+      li {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      a {
+        color: #437fb4;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      table td {
+        white-space: nowrap;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      option {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body style="font-family: SFUIDisplay-Light,sans-serif">
+    <div class="container">
+      <h1>Welcome to 23PPFRFR - A Levels Edition.</h1>
+      <p>The most efficient CIE A Level past paper front end.</p>
+      <div class="container">
+        <table>
+            <tr>
+              <td>
+                <label for="subject">Choose a subject:</label>
+                <select name="subject" id="subject">
+                  <option value="Math">Mathematics 9709</option>
+                  <option value="IT">Information Technology 9626</option>
+                  <option value="Physics">Physics 9702</option>
+                  <option value="Chemistry">Chemistry 9701</option>
+                  <option value="Biology">Biology 9700</option>
+                  <option value="Business">Business 6909</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="paper">Choose a paper:</label>
+                <select name="paper" id="paper">
+                  <option value="1">Paper 1</option>
+                  <option value="2">Paper 2</option>
+                  <option value="3">Paper 3</option>
+                  <option value="4">Paper 4</option>
+                  <option value="5">Paper 5</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="month">Choose a month:</label>
+                <select name="month" value="june" id="month">
+                  <option value="march">March</option>
+                  <option selected value="june">June</option>
+                  <option value="november">November</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="year">Choose a year:</label>
+                <select name="year" value="22" id="year">
+                  <option value="17">2017</option>
+                  <option value="18">2018</option>
+                  <option value="19">2019</option>
+                  <option value="20">2020</option>
+                  <option value="21">2021</option>
+                  <option selected value="22">2022</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="variant">Choose a variant:</label>
+                <select name="variant" id="variant">
+                  <option value="1">Variant 1</option>
+                  <option value="2">Variant 2 (and all March papers)</option>
+                  <option value="3">Variant 3</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="type">Choose a type:</label>
+                <select name="type" id="type">
+                  <option value="qp">Question Paper</option>
+                  <option value="ms">Marking Scheme</option>
+                  <option value="sf">Source Files & Inserts</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+          
+    
+        <br />
+    
+        <input type="submit" value="Get paper" onclick="run()" />
+        <input type="submit" value="Get paper (new tab)" onclick="newtab()" />
+    
+        <br />
+        <br />
+      </div>
+    
+      <div class="container">
+        <div>&copy; Syed Ali Daim &amp; Shaheer Muhammad Arif</div>
+        <div>
+            To report a problem, click <a href="https://wa.link/xkzk2s">here.</a>
+          </div>
+          <div>
+            Open sourced website code is available
+            <a href="https://github.com/syeddaim13/ppfrfr23">here.</a>
+          </div>
+          <br />
+          <a href="igcse.html">Looking for IGCSE past papers?</a>
+        </div>
+        </div>
+  </body>
+</html>
+    
