@@ -222,8 +222,7 @@
 
         <br />
 
-        <input type="submit" value="Get paper" onclick="run()" />
-        <input type="submit" value="Get paper (new tab)" onclick="newtab()" />
+        <div style="text-align: center;"> <input type="submit" value="Get paper" onclick="run()" /> </div>
 
         <br />
         <br />
@@ -243,6 +242,18 @@
         </div>
         <br />
         <a href="igcse.html">Looking for IGCSE past papers?</a>
+      </div>
+    </div>
+
+    <div style="display: none;" id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Open in New Tab</h2>
+        <p>Do you want to always open the paper in a new tab?</p>
+        <label>
+          <input type="checkbox" id="newTabCheckbox" /> Always open in new tab
+        </label>
+        <button id="modalButton">Save</button>
       </div>
     </div>
   </body>
