@@ -1,6 +1,6 @@
-function run() {
+var alwaysOpenInNewTab
 
-    var alwaysOpenInNewTab
+function run() {
 
     if (document.cookie != "true" || document.cookie != "false") {
     
@@ -11,6 +11,7 @@ function run() {
     // Get the modal button and checkbox
     var modalButton = document.getElementById("modalButton");
     var newTabCheckbox = document.getElementById("newTabCheckbox");
+    var RememberCheckbox = document.getElementById("RememberCheckbox");
 
     // Close the modal when the close button is clicked
     var closeButton = document.getElementsByClassName("close")[0];
@@ -21,11 +22,18 @@ function run() {
     // Save the checkbox value as a cookie when the modal button is clicked
     modalButton.onclick = function () {
       alwaysOpenInNewTab = newTabCheckbox.checked;
-      document.cookie = alwaysOpenInNewTab;
-      console.log("Cookie set to: " + alwaysOpenInNewTab);
+      if (RememberCheckbox.checked) {
+        document.cookie = alwaysOpenInNewTab;
+        console.log("Cookie set to: " + alwaysOpenInNewTab);
+        }
+        
       modal.style.display = "none";
     };
   }
+    else {
+        alwaysOpenInNewTab = document.cookie;
+        console.log("Cookie found: " + alwaysOpenInNewTab);
+    }
 
     subject = document.getElementById("subject").value
     paper = document.getElementById("paper").value
