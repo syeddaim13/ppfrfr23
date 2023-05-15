@@ -54,7 +54,7 @@ function run() {
     papervalue = parseInt(paper)
     yearvalue = parseInt(year)
     sfeligible = false
-    var link
+    
 
     switch (subject) {
         case "Math":
@@ -172,7 +172,7 @@ function run() {
 }
 
 function openLink() {
-    if (alwaysOpenInNewTab == "true") {
+    if (alwaysOpenInNewTab == "true; alwaysOpenInNewTab=true") {
         window.open(link, "_blank");
     } else {
         window.open(link, "_self");
