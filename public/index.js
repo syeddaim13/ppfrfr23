@@ -40,7 +40,7 @@ function run() {
     };
   }
     else {
-        alwaysOpenInNewTab = document.cookie;
+        alwaysOpenInNewTab = cookieValue;
         console.log("Cookie found: " + alwaysOpenInNewTab);
         startSort()
     }
@@ -182,8 +182,9 @@ function startSort() {
 function openLink() {
 
     var cookieValue = getCookie("alwaysOpenInNewTab");
+    console.log("Cookie value: " + cookieValue);
 
-    if (cookieValue == "true") {
+    if (cookieValue === "true") {
         window.open(link);
     } else {
         window.open(link, "_self");
