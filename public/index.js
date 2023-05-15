@@ -10,15 +10,9 @@ function run() {
     modal.showModal();
 
     // Get the modal button and checkbox
-    var modalButton = document.getElementById("modalButton");
     var newTabCheckbox = document.getElementById("newTabCheckbox");
     var RememberCheckbox = document.getElementById("RememberCheckbox");
-
-    // Close the modal when the close button is clicked
-    var closeButton = document.getElementsByClassName("close")[0];
-    closeButton.onclick = function () {
-      modal.style.display = "none";
-    };
+    
 
     // Save the checkbox value as a cookie when the modal button is clicked
     modalButton.onclick = function () {
