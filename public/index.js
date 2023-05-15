@@ -1,4 +1,5 @@
 var alwaysOpenInNewTab
+var link
 
 function run() {
 
@@ -26,7 +27,7 @@ function run() {
         document.cookie = alwaysOpenInNewTab;
         console.log("Cookie set to: " + alwaysOpenInNewTab);
         }
-        
+
       modal.style.display = "none";
     };
   }
