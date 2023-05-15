@@ -180,7 +180,10 @@ function startSort() {
 }
 
 function openLink() {
-    if (alwaysOpenInNewTab == "true; alwaysOpenInNewTab=true") {
+
+    var cookieValue = getCookie("alwaysOpenInNewTab");
+
+    if (cookieValue == "true") {
         window.open(link);
     } else {
         window.open(link, "_self");
