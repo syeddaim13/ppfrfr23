@@ -6,8 +6,8 @@ function run() {
     if (document.cookie != "true" || document.cookie != "false") {
     
     // Show the modal
-    var modal = document.getElementById("myModal");
-    modal.style.display = "block";
+    var modal = document.querySelector("[data-modal]");
+    modal.showModal();
 
     // Get the modal button and checkbox
     var modalButton = document.getElementById("modalButton");
@@ -28,7 +28,7 @@ function run() {
         console.log("Cookie set to: " + alwaysOpenInNewTab);
         }
 
-      modal.style.display = "none";
+        modal.close();
     };
   }
     else {

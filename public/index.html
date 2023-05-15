@@ -222,7 +222,7 @@
 
         <br />
 
-        <div style="text-align: center;"> <input type="submit" value="Get paper" onclick="run()" /> </div>
+        <div style="text-align: center;"> <input data-open-modal type="submit" value="Get paper" onclick="run()" /> </div>
 
         <br />
         <br />
@@ -245,7 +245,7 @@
       </div>
     </div>
 
-    <div style="display: none;" id="myModal" class="modal">
+    <dialog datamodal id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Open in New Tab</h2>
@@ -255,8 +255,8 @@
           <input type="checkbox" id="RememberCheckbox" /> Remember my choice
 
         </label>
-        <button id="modalButton">Save</button>
+        <button data-close-modal id="modalButton">Save</button>
       </div>
-    </div>
+    </dialog>
   </body>
 </html>
