@@ -181,7 +181,7 @@ function startSort() {
 
 function openLink() {
     if (alwaysOpenInNewTab == "true; alwaysOpenInNewTab=true") {
-        window.open(link, "_blank");
+        window.open(link);
     } else {
         window.open(link, "_self");
     }
