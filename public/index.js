@@ -6,7 +6,7 @@ function run() {
     if (document.cookie != "true" || document.cookie != "false") {
     
     // Show the modal
-    var modal = document.querySelector("[data-modal]");
+    var modal = document.getElementById("dialogbox");
     modal.showModal();
 
     // Get the modal button and checkbox

@@ -132,6 +132,16 @@
           font-size: 10px;
         }
         
+        .modaltext {
+          color: black;
+        }
+
+        dialog {
+          background-color: black;
+          border-radius: 5px;
+          padding: 10px;
+          border: 1px solid #cccccc;
+        }
     </style>
   </head>
   <body style="font-family: SFUIDisplay-Light,sans-serif">
@@ -245,17 +255,16 @@
       </div>
     </div>
 
-    <dialog datamodal id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Open in New Tab</h2>
-        <p>Do you want to always open the paper in a new tab?</p>
+    <dialog style="color: black;" id="dialogbox">
+      
+        <p>Open paper in new tab?</p>
         <label>
-          <input type="checkbox" id="newTabCheckbox" /> Open in new tab
-          <input type="checkbox" id="RememberCheckbox" /> Remember my choice
+          <input class="modaltext" type="checkbox" id="newTabCheckbox" /> Open in new tab
+          <br>
+          <input class="modaltext" type="checkbox" id="RememberCheckbox" /> Remember my choice
 
         </label>
-        <button data-close-modal id="modalButton">Save</button>
+        <div style="text-align: center;"> <input data-close-modal type="submit" id="modalButton">Save</input> </div>
       </div>
     </dialog>
   </body>
