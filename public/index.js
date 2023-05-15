@@ -12,7 +12,6 @@ function getCookie(name) {
     return null;
   }
   
-
 function run() {
 
     var cookieValue = getCookie("alwaysOpenInNewTab");
@@ -37,12 +36,21 @@ function run() {
         }
 
         modal.close();
+        startSort()
     };
   }
     else {
         alwaysOpenInNewTab = document.cookie;
         console.log("Cookie found: " + alwaysOpenInNewTab);
+        startSort()
     }
+
+
+}
+
+
+function startSort() {
+
 
     subject = document.getElementById("subject").value
     paper = document.getElementById("paper").value
