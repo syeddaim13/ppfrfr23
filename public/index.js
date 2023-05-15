@@ -1,9 +1,23 @@
 var alwaysOpenInNewTab
 var link
 
+function getCookie(name) {
+    var cookieArr = document.cookie.split("; ");
+    for (var i = 0; i < cookieArr.length; i++) {
+      var cookiePair = cookieArr[i].split("=");
+      if (cookiePair[0] === name) {
+        return cookiePair[1];
+      }
+    }
+    return null;
+  }
+  
+
 function run() {
 
-    if (document.cookie != "true" || document.cookie != "false") {
+    var cookieValue = getCookie("alwaysOpenInNewTab");
+
+    if (cookieValue !== "true" && cookieValue !== "false") {
     
     // Show the modal
     var modal = document.getElementById("dialogbox");
@@ -12,13 +26,13 @@ function run() {
     // Get the modal button and checkbox
     var newTabCheckbox = document.getElementById("newTabCheckbox");
     var RememberCheckbox = document.getElementById("RememberCheckbox");
-    
+    var modalButton = document.getElementById("modalButton");
 
     // Save the checkbox value as a cookie when the modal button is clicked
     modalButton.onclick = function () {
       alwaysOpenInNewTab = newTabCheckbox.checked;
       if (RememberCheckbox.checked) {
-        document.cookie = alwaysOpenInNewTab;
+        document.cookie = "alwaysOpenInNewTab=" + alwaysOpenInNewTab;
         console.log("Cookie set to: " + alwaysOpenInNewTab);
         }
 
@@ -153,11 +167,11 @@ function run() {
         link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.pdf';
     }
     
-    open()
+    openLink()
     
 }
 
-function open() {
+function openLink() {
     if (alwaysOpenInNewTab == "true") {
         window.open(link, "_blank");
     } else {
