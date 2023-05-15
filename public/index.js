@@ -33,7 +33,9 @@ function run() {
       if (RememberCheckbox.checked) {
         document.cookie = "alwaysOpenInNewTab=" + alwaysOpenInNewTab;
         console.log("Cookie set to: " + alwaysOpenInNewTab);
-        }
+      }
+
+
 
         modal.close();
         startSort()
@@ -184,7 +186,10 @@ function openLink() {
     var cookieValue = getCookie("alwaysOpenInNewTab");
     console.log("Cookie value: " + cookieValue);
 
-    if (cookieValue === "true") {
+    var newTabCheckbox = document.getElementById("newTabCheckbox");
+
+
+    if (cookieValue === "true" || newTabCheckbox.checked) {
         window.open(link);
     } else {
         window.open(link, "_self");
