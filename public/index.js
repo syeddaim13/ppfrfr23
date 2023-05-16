@@ -107,6 +107,11 @@ function startSort() {
             maxpapers = 3
             sfeligible = true 
             break;
+        case "Sociology":
+            subjectcode = "9699"
+            subjectlink = "Sociology%20(9699)"
+            maxpapers = 4
+            break;
         default:
             alert("Error in switch. Please report this.");
     }
@@ -124,12 +129,21 @@ function startSort() {
             alert("Error in month switch. Please report this.");
     }
     console.log(subjectcode)
-//paper validation
+//paper validation and grade thresholds
     if (papervalue > maxpapers) {
         alert("Please select a valid paper. ("+subject+" only has "+maxpapers+" papers.)") 
     }
 
-//paper validation end
+    else if (type == "gt") {
+        link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+"gt.pdf"; //link for gt
+    }
+
+    else if (type == "er") {
+        link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+"er.pdf"; //link for er
+    }
+
+
+//paper validation and grade thresholds end
     // special cases
     else if (type == "sf" && subject == "IT" && year == "17" && monthcode == "m") {
         link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+year+'_'+"SF"+'_'+paper+'.zip'; //link for sf 2017 march
