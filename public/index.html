@@ -142,6 +142,29 @@
           padding: 10px;
           border: 1px solid #cccccc;
         }
+
+        dialog::backdrop {
+          background-color: black;
+        }
+
+        input.checkboxbig {
+          width: 30px;
+          height: 30px;
+          padding-top: 10px;
+          vertical-align: middle;
+          position: relative;
+          top: -2px;
+        }
+        h3 {
+          font-size: 50px;
+        }
+        a {
+          text-decoration: none;
+        }
+
+        h4 {
+          font-size: 20px;
+        }
     </style>
   </head>
   <body style="font-family: SFUIDisplay-Light,sans-serif">
@@ -257,15 +280,18 @@
 
     <dialog style="color: black;" id="dialogbox">
       
-        <p>Open paper in new tab?</p>
-        <label>
-          <input class="modaltext" type="checkbox" id="newTabCheckbox" /> Open in new tab
-          <br>
-          <input class="modaltext" type="checkbox" id="RememberCheckbox" /> Remember my choice
+      <p style="font-size: 50px;">Open paper in new tab?</p>
+      <label>
+        <h4> <input class="checkboxbig" type="checkbox" id="newTabCheckbox" /> &nbsp; Open in new tab </h4>
+      </label>
+      <label>
+      <h4> <input class="checkboxbig" type="checkbox" id="RememberCheckbox" /> &nbsp; Remember my choice </h4>
 
-        </label>
-        <div style="text-align: center;"> <input data-close-modal type="submit" id="modalButton"></input> </div>
-      </div>
+      </label>
+            <div style="text-align: center; padding: 30px;"> <input data-close-modal type="submit" id="modalButton"></input> </div>
+      
+    <p>&copy ppfrfr23</p>
+    <p style="font-size: 30px;">Tap outside to cancel.</p>
     </dialog>
   </body>
 </html>
