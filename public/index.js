@@ -1,9 +1,9 @@
-var alwaysOpenInNewTab
-var link
+var alwaysOpenInNewTab //global variable to store cookie value
+var link //global variable to store link
 
 function getCookie(name) {
     var cookieArr = document.cookie.split("; ");
-    for (var i = 0; i < cookieArr.length; i++) {
+    for (var i = 0; i < cookieArr.length; i++) {   //function to get cookie value
       var cookiePair = cookieArr[i].split("=");
       if (cookiePair[0] === name) {
         return cookiePair[1];
@@ -14,15 +14,15 @@ function getCookie(name) {
   
 function run() {
 
-    var cookieValue = getCookie("alwaysOpenInNewTab");
+    var cookieValue = getCookie("alwaysOpenInNewTab"); //check if cookie exists
 
-    if (cookieValue !== "true" && cookieValue !== "false") {
+    if (cookieValue !== "true" && cookieValue !== "false") { //cookie doesn't exist, show modal
     
     // Show the modal
     var modal = document.getElementById("dialogbox");
     modal.showModal();
 
-    modal.addEventListener("click", e => {
+    modal.addEventListener("click", e => {  //mechanism to close modal when clicked outside
         const dialogDimensions = modal.getBoundingClientRect()
         if (
         e.clientX < dialogDimensions.left ||
@@ -49,13 +49,13 @@ function run() {
 
 
 
-        modal.close();
+        modal.close(); //close modal, even if error occurs
         startSort()
     };
   }
     else {
         alwaysOpenInNewTab = cookieValue;
-        console.log("Cookie found: " + alwaysOpenInNewTab);
+        console.log("Cookie found: " + alwaysOpenInNewTab); //cookie found, no need to show modal
         startSort()
     }
 
@@ -126,7 +126,7 @@ function startSort() {
     console.log(subjectcode)
 //paper validation
     if (papervalue > maxpapers) {
-        alert("The chosen subject does not have a paper pertaining to this value.")
+        alert("Please select a valid paper. ("+subject+" only has "+maxpapers+" papers.)") 
     }
 
 //paper validation end
@@ -178,12 +178,10 @@ function startSort() {
 
     else if (subject == "Business" && paper == "3" && type == "sf") {
         link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+'in'+'_'+paper+variant+'.pdf';
-
     }
     //Business END
 
     else if (monthcode == "m" && variant != "2") { //validate march variant
-        alert("You want a March paper, yet picked a variant that is not equal to 2. This is shameful. We're redirecting you to variant 2 anyway.")
         link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+'2'+'.pdf';
     } else {
         link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+paper+variant+'.pdf';
@@ -201,7 +199,7 @@ function openLink() {
     var newTabCheckbox = document.getElementById("newTabCheckbox");
 
 
-    if (cookieValue === "true" || newTabCheckbox.checked) {
+    if (cookieValue === "true" || newTabCheckbox.checked) { //if cookie is true or checkbox is checked
         window.open(link);
     } else {
         window.open(link, "_self");
