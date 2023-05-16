@@ -47,25 +47,25 @@
       }
 
       h1 {
-        font-size: 36px;
-        margin-top: 40px;
-        margin-bottom: 20px;
+        font-size: 50px;
+        margin-top: 50px;
+        margin-bottom: 50px;
       }
 
       p {
-        font-size: 20px;
-        margin-bottom: 30px;
+        font-size: 34px;
+        margin-bottom: 50px;
       }
 
       label {
-        font-size: 26px;
+        font-size: 50px;
         display: block;
         margin-bottom: 10px;
       }
 
       select,
       input[type="submit"] {
-        font-size: 18px;
+        font-size: 35px;
         padding: 12px;
         border-radius: 8px;
         border: 2px solid #cccccc;
@@ -136,8 +136,23 @@
         dialog {
           background-color: black;
           border-radius: 5px;
-          padding: 10px;
+          padding: 50px;
           border: 1px solid #cccccc;
+        }
+
+        dialog::backdrop {
+          background-color: black;
+        }
+
+        input.checkboxbig {
+          width: 30px;
+          height: 30px;
+        }
+        h3 {
+          font-size: 50px;
+        }
+        a {
+          text-decoration: none;
         }
     </style>
   </head>
@@ -236,22 +251,26 @@
             <a href="https://github.com/syeddaim13/ppfrfr23">here.</a>
           </div>
           <br />
-          <a href="igcse.html">Looking for IGCSE past papers?</a>
+          <h3><a href="igcse.html">Looking for IGCSE past papers?</a></h3>
         </div>
         </div>
 
 
         <dialog style="color: black;" id="dialogbox">
       
-          <p>Open paper in new tab?</p>
+          <p style="font-size: 60px;">Open paper in new tab?</p>
           <label>
-            <input class="modaltext" type="checkbox" id="newTabCheckbox" /> Open in new tab
-            <br>
-            <input class="modaltext" type="checkbox" id="RememberCheckbox" /> Remember my choice
+            <input class="checkboxbig" type="checkbox" id="newTabCheckbox" /> &nbsp; Open in new tab
+          </label>
+          <label>
+            <input class="checkboxbig" type="checkbox" id="RememberCheckbox" /> &nbsp; Remember my choice
   
           </label>
-          <div style="text-align: center;"> <input data-close-modal type="submit" id="modalButton"></input> </div>
+                <div style="text-align: center; padding: 30px;"> <input data-close-modal type="submit" id="modalButton"></input> </div>
+          
         </div>
+        <p>&copy ppfrfr23</p>
+        <p style="font-size: 30px;">Tap outside to cancel.</p>
       </dialog>
   </body>
 </html>

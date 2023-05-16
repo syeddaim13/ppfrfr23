@@ -22,6 +22,18 @@ function run() {
     var modal = document.getElementById("dialogbox");
     modal.showModal();
 
+    modal.addEventListener("click", e => {
+        const dialogDimensions = modal.getBoundingClientRect()
+        if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+        ) {
+        modal.close()
+        }
+    })
+
     // Get the modal button and checkbox
     var newTabCheckbox = document.getElementById("newTabCheckbox");
     var RememberCheckbox = document.getElementById("RememberCheckbox");
