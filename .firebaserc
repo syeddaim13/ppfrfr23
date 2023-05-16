@@ -5,7 +5,7 @@
   "targets": {
     "ppfrfr-68676": {
       "hosting": {
-        "papers23": [
+        "ppfrfr23": [
           "papers23"
         ]
       }
