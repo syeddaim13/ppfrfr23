@@ -132,6 +132,8 @@ function startSort() {
 //paper validation and grade thresholds
     if (papervalue > maxpapers) {
         alert("Please select a valid paper. ("+subject+" only has "+maxpapers+" papers.)") 
+        // delete link variable if already set so that it kills the function
+        link = undefined
     }
 
     else if (type == "gt") {
