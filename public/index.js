@@ -155,10 +155,12 @@ function startSort() {
     //IT
     else if (type == "sf" && sfeligible == false ) {
         alert("Source files and/or insert files aren't available for "+subject+".")  //validate sf subject
+        link = undefined
     }
 
     else if (subject == "IT" && monthcode == "m" && variant != "2") {
         alert("Please select Variant 2.") //check if sf picked with march and non 1 variant
+        link = undefined
     }
 
     else if (type == "sf" && subject == "IT") {
