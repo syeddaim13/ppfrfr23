@@ -11,6 +11,9 @@ document.getElementById("month").addEventListener("change", function() {
 
         document.getElementById("variantfieldset").style.opacity = "0.5";
     }
+    else if (document.getElementById("type").value == "gt" || document.getElementById("type").value == "er") {
+        document.getElementById("variantfieldset").style.opacity = "0.5" 
+    }
     else {
         document.getElementById("variant1label").style.display = "" //show it
         document.getElementById("variant3label").style.display = "" 
