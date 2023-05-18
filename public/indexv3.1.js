@@ -6,31 +6,49 @@ var link //global variable to store link
 document.getElementById("month").addEventListener("change", function() {
     if (document.getElementById("month").value == "march") {
         document.getElementById("variant2").checked = true
-        document.getElementById("variant1").disabled = true
-        document.getElementById("variant3").disabled = true
+        document.getElementById("variant1label").style.display = "none" //hide it
+        document.getElementById("variant3label").style.display = "none"
+
+        document.getElementById("variantfieldset").style.opacity = "0.5";
     }
     else {
-        document.getElementById("variant1").disabled = false
-        document.getElementById("variant3").disabled = false
+        document.getElementById("variant1label").style.display = "" //show it
+        document.getElementById("variant3label").style.display = "" 
         document.getElementById("variant1").checked = true
+        document.getElementById("variantfieldset").style.opacity = "";
     }
 })
 
 //event listener to lock paper and variant if gt or er is picked
 document.getElementById("type").addEventListener("change", function() {
     if (document.getElementById("type").value == "gt" || document.getElementById("type").value == "er") {
+        
         document.getElementById("paper").disabled = true
         document.getElementById("variant1").disabled = true
         document.getElementById("variant2").disabled = true
         document.getElementById("variant3").disabled = true
+        document.getElementById("paper").disabled = true
+        document.getElementById("month").disabled = true
+
+        document.getElementById("monthfieldset").style.opacity = "0.5";
+        document.getElementById("variantfieldset").style.opacity = "0.5";
+        document.getElementById("paperfieldset").style.opacity = "0.5";
     }
     else {
         document.getElementById("paper").disabled = false
         document.getElementById("variant1").disabled = false
         document.getElementById("variant2").disabled = false
         document.getElementById("variant3").disabled = false
+        document.getElementById("paper").disabled = false
+        document.getElementById("month").disabled = false
+        
+        document.getElementById("monthfieldset").style.opacity = "";
+        document.getElementById("variantfieldset").style.opacity = "";
+        document.getElementById("paperfieldset").style.opacity = "";
     }
 })
+
+
 
 function getCookie(name) {
     var cookieArr = document.cookie.split("; ");

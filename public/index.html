@@ -1,9 +1,10 @@
-<html lang="en-gb">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Paper Finder (AL)</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
 
       if (screen.width <= 699) {
@@ -231,7 +232,7 @@
               </fieldset>
             </td>
             <td>
-              <fieldset>
+              <fieldset id="paperfieldset">
                 <legend>Choose a paper:</legend>
                 <select name="paper" id="paper">
                   <option value="1">Paper 1</option>
@@ -243,7 +244,7 @@
               </fieldset>
             </td>
             <td>
-              <fieldset>
+              <fieldset id="monthfieldset">
                 <legend>Choose a month:</legend>
                 <select name="month" value="june" id="month">
                   <option value="march">March</option>
@@ -269,10 +270,10 @@
             </td>
             <td>
               
-              <fieldset>
+              <fieldset id="variantfieldset">
                 <legend>Choose a variant:</legend>
                 <div class="radio-group">
-                  <label>
+                  <label id="variant1label">
                     <input type="radio" name="variant" id="variant1" value="1" checked>
                     Variant 1
                   </label>
@@ -280,7 +281,7 @@
                     <input type="radio" name="variant" id="variant2" value="2">
                     Variant 2
                   </label>
-                  <label>
+                  <label id="variant3label">
                     <input type="radio" name="variant" id="variant3" value="3">
                     Variant 3
                   </label>
@@ -348,5 +349,5 @@
     <p style="font-size: 30px;">Click outside to cancel.</p>
     </dialog>
   </body>
-  <script src="indexv3.1.js"></script>
+  <script src="indexv3.1.js?"></script>
 </html>
