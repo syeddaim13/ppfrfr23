@@ -30,7 +30,7 @@
         justify-content: center;
         min-height: 100vh;
         color: white;
-
+        font-family: "SFUIDisplay-Light", sans-serif;
       }
 
       h1, p, label, select, input, ul, li {
@@ -175,9 +175,41 @@
           color: white;
         }
 
+        .modal-fade-in {
+          animation-name: modalFadeIn;
+          animation-duration: 0.3s;
+          animation-timing-function: ease-in-out;
+        }
+
+        @keyframes modalFadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        
+        .website-fade-in {
+          opacity: 0;
+          animation-name: websiteFadeIn;
+          animation-duration: 1s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+        }
+
+        @keyframes websiteFadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
     </style>
   </head>
-  <body style="font-family: SFUIDisplay-Light,sans-serif">
+  <body class="website-fade-in">
     <div class="container">
       <div class="column">
         <h1>Welcome to Paper Finder 🧐 - A Levels Edition.</h1>
@@ -301,7 +333,7 @@
       </div>
     </div>
 
-    <dialog style="color: black;" id="dialogbox">
+    <dialog class="modal-fade-in" style="color: black;" id="dialogbox">
       
       <p style="font-size: 50px;">Open paper in new tab?</p>
       <label>

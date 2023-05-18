@@ -33,6 +33,7 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
+        font-family: "SFUIDisplay-Light", sans-serif;
       }
 
       h1,
@@ -163,9 +164,46 @@
           color: white;
           font-size: 50px;
         }
+        .modal-fade-in {
+          animation-name: modalFadeIn;
+          animation-duration: 0.3s;
+          animation-timing-function: ease-in-out;
+        }
+
+        @keyframes modalFadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        
+        .website-fade-in {
+          opacity: 0;
+          animation-name: websiteFadeIn;
+          animation-duration: 1s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+        }
+
+        @keyframes websiteFadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+         fieldset { /*mobile sepecific */
+          width: 80%;
+          margin: 0 auto;
+        }
+
     </style>
   </head>
-  <body style="font-family: SFUIDisplay-Light,sans-serif">
+  <body class="website-fade-in">
     <div class="container">
       <h1>Welcome to Paper Finder 🧐 - A Levels Edition.</h1>
       <p>The most efficient CIE A Level past paper front end. <br>(mobile 📲 version)</p>
@@ -173,51 +211,59 @@
         <table>
             <tr>
               <td>
-                <label for="subject">Choose a subject:</label>
-                <select name="subject" id="subject">
-                  <option value="Math">Mathematics 9709</option>
-                  <option value="IT">Information Technology 9626</option>
-                  <option value="Physics">Physics 9702</option>
-                  <option value="Chemistry">Chemistry 9701</option>
-                  <option value="Biology">Biology 9700</option>
-                  <option value="Business">Business 9609</option>
-                  <option value="Sociology">Sociology 9699</option>
-                </select>
+                <fieldset>
+                  <legend>Choose a subject:</legend>
+                  <select name="subject" id="subject">
+                    <option value="Math">Mathematics 9709</option>
+                    <option value="IT">Information Technology 9626</option>
+                    <option value="Physics">Physics 9702</option>
+                    <option value="Chemistry">Chemistry 9701</option>
+                    <option value="Biology">Biology 9700</option>
+                    <option value="Business">Business 9609</option>
+                    <option value="Sociology">Sociology 9699</option>
+                  </select>
+                </fieldset>
               </td>
             </tr>
             <tr>
               <td>
-                <label for="paper">Choose a paper:</label>
-                <select name="paper" id="paper">
-                  <option value="1">Paper 1</option>
-                  <option value="2">Paper 2</option>
-                  <option value="3">Paper 3</option>
-                  <option value="4">Paper 4</option>
-                  <option value="5">Paper 5</option>
-                </select>
+                <fieldset>
+                  <legend>Choose a paper:</legend>
+                  <select name="paper" id="paper">
+                    <option value="1">Paper 1</option>
+                    <option value="2">Paper 2</option>
+                    <option value="3">Paper 3</option>
+                    <option value="4">Paper 4</option>
+                    <option value="5">Paper 5</option>
+                  </select>
+                </fieldset>
               </td>
             </tr>
             <tr>
               <td>
-                <label for="month">Choose a month:</label>
-                <select name="month" value="june" id="month">
-                  <option value="march">March</option>
-                  <option selected value="june">June</option>
-                  <option value="november">November</option>
-                </select>
+                <fieldset>
+                  <legend>Choose a month:</legend>
+                  <select name="month" value="june" id="month">
+                    <option value="march">March</option>
+                    <option selected value="june">June</option>
+                    <option value="november">November</option>
+                  </select>
+                </fieldset>
               </td>
             </tr>
             <tr>
               <td>
-                <label for="year">Choose a year:</label>
-                <select name="year" value="22" id="year">
-                  <option value="17">2017</option>
-                  <option value="18">2018</option>
-                  <option value="19">2019</option>
-                  <option value="20">2020</option>
-                  <option value="21">2021</option>
-                  <option selected value="22">2022</option>
-                </select>
+                <fieldset>
+                  <legend>Choose a year:</legend>
+                  <select name="year" value="22" id="year">
+                    <option value="17">2017</option>
+                    <option value="18">2018</option>
+                    <option value="19">2019</option>
+                    <option value="20">2020</option>
+                    <option value="21">2021</option>
+                    <option selected value="22">2022</option>
+                  </select>
+                </fieldset>
               </td>
             </tr>
             <tr>
@@ -243,14 +289,16 @@
             </tr>
             <tr>
               <td>
-                <label for="type">Choose a type:</label>
-                <select name="type" id="type">
-                  <option value="qp">Question Paper</option>
-                  <option value="ms">Marking Scheme</option>
-                  <option value="sf">Source Files & Inserts</option>
-                  <option value="gt">Grade Thresholds</option>
-                  <option value="er">Examiner Reports</option>
-                </select>
+                <fieldset>
+                  <legend>Choose a type:</legend>
+                  <select name="type" id="type">
+                    <option value="qp">Question Paper</option>
+                    <option value="ms">Marking Scheme</option>
+                    <option value="sf">Source Files & Inserts</option>
+                    <option value="gt">Grade Thresholds</option>
+                    <option value="er">Examiner Reports</option>
+                  </select>
+                </fieldset>
               </td>
             </tr>
           </table>
@@ -282,7 +330,7 @@
       </div>
 
 
-        <dialog style="color: black;" id="dialogbox">
+        <dialog class="modal-fade-in" style="color: black;" id="dialogbox">
       
           <p style="font-size: 60px;">Open paper in new tab?</p>
           <label>
