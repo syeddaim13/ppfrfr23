@@ -16,6 +16,22 @@ document.getElementById("month").addEventListener("change", function() {
     }
 })
 
+//event listener to lock paper and variant if gt or er is picked
+document.getElementById("type").addEventListener("change", function() {
+    if (document.getElementById("type").value == "gt" || document.getElementById("type").value == "er") {
+        document.getElementById("paper").disabled = true
+        document.getElementById("variant1").disabled = true
+        document.getElementById("variant2").disabled = true
+        document.getElementById("variant3").disabled = true
+    }
+    else {
+        document.getElementById("paper").disabled = false
+        document.getElementById("variant1").disabled = false
+        document.getElementById("variant2").disabled = false
+        document.getElementById("variant3").disabled = false
+    }
+})
+
 function getCookie(name) {
     var cookieArr = document.cookie.split("; ");
     for (var i = 0; i < cookieArr.length; i++) {   //function to get cookie value
