@@ -31,9 +31,27 @@ document.getElementById("type").addEventListener("change", function() {
         document.getElementById("variant2").disabled = true
         document.getElementById("variant3").disabled = true
         document.getElementById("paper").disabled = true
+        
 
         document.getElementById("variantfieldset").style.opacity = "0.5";
         document.getElementById("paperfieldset").style.opacity = "0.5";
+    }
+    else if (document.getElementById("month").value !== "march") {
+        document.getElementById("variantfieldset").style.opacity = "0.5"
+        document.getElementById("variant1label").style.display = "" //show it
+        document.getElementById("variant3label").style.display = "" 
+        document.getElementById("variant1").checked = true
+        document.getElementById("variantfieldset").style.opacity = "";
+
+
+        document.getElementById("paper").disabled = false
+        document.getElementById("variant1").disabled = false
+        document.getElementById("variant2").disabled = false
+        document.getElementById("variant3").disabled = false
+        document.getElementById("paper").disabled = false
+        
+        document.getElementById("variantfieldset").style.opacity = "";
+        document.getElementById("paperfieldset").style.opacity = "";
     }
     else {
         document.getElementById("paper").disabled = false
