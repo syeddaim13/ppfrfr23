@@ -28,9 +28,7 @@ document.getElementById("type").addEventListener("change", function() {
         document.getElementById("variant2").disabled = true
         document.getElementById("variant3").disabled = true
         document.getElementById("paper").disabled = true
-        document.getElementById("month").disabled = true
 
-        document.getElementById("monthfieldset").style.opacity = "0.5";
         document.getElementById("variantfieldset").style.opacity = "0.5";
         document.getElementById("paperfieldset").style.opacity = "0.5";
     }
@@ -40,9 +38,7 @@ document.getElementById("type").addEventListener("change", function() {
         document.getElementById("variant2").disabled = false
         document.getElementById("variant3").disabled = false
         document.getElementById("paper").disabled = false
-        document.getElementById("month").disabled = false
         
-        document.getElementById("monthfieldset").style.opacity = "";
         document.getElementById("variantfieldset").style.opacity = "";
         document.getElementById("paperfieldset").style.opacity = "";
     }
