@@ -71,7 +71,7 @@ function startSort() {
     month = document.getElementById("month").value
     year = document.getElementById("year").value
     type = document.getElementById("type").value
-    variant = document.getElementById("variant").value
+    variant = document.querySelector('input[name="variant"]:checked').value;
     maxpapers = 5
     papervalue = parseInt(paper)
     yearvalue = parseInt(year)

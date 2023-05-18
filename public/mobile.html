@@ -4,7 +4,7 @@
     <title>Paper Finder (AL)</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png" />
-    <script src="index.js"></script>
+    <script src="indexv3.0.js"></script>
     
     <style>
       @font-face {
@@ -154,12 +154,21 @@
         a {
           text-decoration: none;
         }
+        .radio-group label {
+          display: inline-block;
+          margin-right: 10px;
+        }
+
+        legend {
+          color: white;
+          font-size: 50px;
+        }
     </style>
   </head>
   <body style="font-family: SFUIDisplay-Light,sans-serif">
     <div class="container">
       <h1>Welcome to Paper Finder 🧐 - A Levels Edition.</h1>
-      <p>The most efficient CIE A Level past paper front end.</p>
+      <p>The most efficient CIE A Level past paper front end. <br>(mobile 📲 version)</p>
       <div class="container">
         <table>
             <tr>
@@ -213,12 +222,23 @@
             </tr>
             <tr>
               <td>
-                <label for="variant">Choose a variant:</label>
-                <select name="variant" id="variant">
-                  <option value="1">Variant 1</option>
-                  <option value="2">Variant 2 (and all March papers)</option>
-                  <option value="3">Variant 3</option>
-                </select>
+                <fieldset>
+                  <legend>Choose a variant:</legend>
+                  <div class="radio-group">
+                    <label>
+                      <input type="radio" name="variant" value="1" checked>
+                      Variant 1
+                    </label>
+                    <label>
+                      <input type="radio" name="variant" value="2">
+                      Variant 2
+                    </label>
+                    <label>
+                      <input type="radio" name="variant" value="3">
+                      Variant 3
+                    </label>
+                  </div>
+                </fieldset>
               </td>
             </tr>
             <tr>
@@ -255,6 +275,9 @@
         </div>
           <br />
           <h3><a href="igcse.html">Looking for IGCSE past papers?</a></h3>
+        </div>
+        <div>
+          links provided are from <a href="https://papers.gceguide.com">papers.gceguide.com</a> <br> all rights reserved to them.
         </div>
       </div>
 
