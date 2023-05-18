@@ -1,6 +1,21 @@
 var alwaysOpenInNewTab //global variable to store cookie value
 var link //global variable to store link
 
+//event listener that selects variant 2 if march is picked and locks it
+
+document.getElementById("month").addEventListener("change", function() {
+    if (document.getElementById("month").value == "march") {
+        document.getElementById("variant2").checked = true
+        document.getElementById("variant1").disabled = true
+        document.getElementById("variant3").disabled = true
+    }
+    else {
+        document.getElementById("variant1").disabled = false
+        document.getElementById("variant3").disabled = false
+        document.getElementById("variant1").checked = true
+    }
+})
+
 function getCookie(name) {
     var cookieArr = document.cookie.split("; ");
     for (var i = 0; i < cookieArr.length; i++) {   //function to get cookie value
