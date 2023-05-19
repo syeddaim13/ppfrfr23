@@ -93,6 +93,14 @@ document.getElementById("paper").addEventListener("change", function() {
 document.getElementById("month").addEventListener("change", function() {
     document.cookie = "month=" + document.getElementById("month").value
     console.log("Month Cookie set to: " + document.getElementById("month").value)
+
+    if (document.getElementById("month").value == "march") {
+        document.getElementById("variant2").checked = true
+        document.getElementById("variant1label").style.display = "none" //hide it
+        document.getElementById("variant3label").style.display = "none"
+
+        document.getElementById("variantfieldset").style.opacity = "0.5";
+    }
 })
 
 document.getElementById("year").addEventListener("change", function() {
