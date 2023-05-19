@@ -16,5 +16,5 @@
 - Not all subjects are supported.
 
 
-Link to [website.](https://ppfrfr23.web.app/)
+Link to [website.](https://papers23.web.app/)
 Designed for Alwadi International School, Jeddah students.
