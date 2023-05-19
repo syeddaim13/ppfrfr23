@@ -1,6 +1,17 @@
 var alwaysOpenInNewTab //global variable to store cookie value
 var link //global variable to store link
 
+function getCookie(name) {
+    var cookieArr = document.cookie.split("; ");
+    for (var i = 0; i < cookieArr.length; i++) {   //function to get cookie value
+      var cookiePair = cookieArr[i].split("=");
+      if (cookiePair[0] === name) {
+        return cookiePair[1];
+      }
+    }
+    return null;
+  }
+
 //event listener that selects variant 2 if march is picked and locks it
 
 document.getElementById("month").addEventListener("change", function() {
@@ -65,18 +76,65 @@ document.getElementById("type").addEventListener("change", function() {
     }
 })
 
+//event listener that saves all values as cookies when they are changed
+document.getElementById("subject").addEventListener("change", function() {
+    document.cookie = "subject=" + document.getElementById("subject").value
+    console.log("Subject Cookie set to: " + document.getElementById("subject").value)
+})
 
+document.getElementById("paper").addEventListener("change", function() {
+    document.cookie = "paper=" + document.getElementById("paper").value
+    console.log("Paper Cookie set to: " + document.getElementById("paper").value)
+})
 
-function getCookie(name) {
-    var cookieArr = document.cookie.split("; ");
-    for (var i = 0; i < cookieArr.length; i++) {   //function to get cookie value
-      var cookiePair = cookieArr[i].split("=");
-      if (cookiePair[0] === name) {
-        return cookiePair[1];
-      }
-    }
-    return null;
-  }
+document.getElementById("month").addEventListener("change", function() {
+    document.cookie = "month=" + document.getElementById("month").value
+    console.log("Month Cookie set to: " + document.getElementById("month").value)
+})
+
+document.getElementById("year").addEventListener("change", function() {
+    document.cookie = "year=" + document.getElementById("year").value
+    console.log("Year Cookie set to: " + document.getElementById("year").value)
+})
+
+document.getElementById("type").addEventListener("change", function() {
+    document.cookie = "type=" + document.getElementById("type").value
+    console.log("Type Cookie set to: " + document.getElementById("type").value)
+})
+
+document.getElementById("variant1").addEventListener("change", function() {
+    document.cookie = "variant1=" + document.getElementById("variant1").checked
+    console.log("V1 Cookie set to: " + document.getElementById("variant1").checked)
+})
+
+document.getElementById("variant2").addEventListener("change", function() {
+    document.cookie = "variant2=" + document.getElementById("variant2").checked
+    console.log("V2 Cookie set to: " + document.getElementById("variant2").checked)
+})
+
+document.getElementById("variant3").addEventListener("change", function() {
+    document.cookie = "variant3=" + document.getElementById("variant3").checked
+    console.log("V3 Cookie set to: " + document.getElementById("variant3").checked)
+})
+
+document.getElementById("newTabCheckbox").addEventListener("change", function() {
+    document.cookie = "newTabCheckboxVal=" + document.getElementById("newTabCheckbox").checked
+    console.log("newtabcheckbox Cookie set to: " + document.getElementById("newTabCheckbox").checked)
+})
+
+//read cookies using getCookie function and set values when page loads if cookie present
+
+window.onload = function() {
+    document.getElementById("subject").value = getCookie("subject")
+    document.getElementById("paper").value = getCookie("paper")
+    document.getElementById("month").value = getCookie("month")
+    document.getElementById("year").value = getCookie("year")
+    document.getElementById("type").value = getCookie("type")
+    document.getElementById("variant1").checked = getCookie("variant1") == "true"
+    document.getElementById("variant2").checked = getCookie("variant2") == "true"
+    document.getElementById("variant3").checked = getCookie("variant3") == "true"
+}
+
   
 function run() {
 
@@ -105,12 +163,15 @@ function run() {
     var RememberCheckbox = document.getElementById("RememberCheckbox");
     var modalButton = document.getElementById("modalButton");
 
+    // Set the checkbox value to the value of the cookie of newTabCheckboxVal
+    newTabCheckbox.checked = getCookie("newTabCheckboxVal") == "true";
+
     // Save the checkbox value as a cookie when the modal button is clicked
     modalButton.onclick = function () {
       alwaysOpenInNewTab = newTabCheckbox.checked;
       if (RememberCheckbox.checked) {
         document.cookie = "alwaysOpenInNewTab=" + alwaysOpenInNewTab;
-        console.log("Cookie set to: " + alwaysOpenInNewTab);
+        console.log("Remember new tab always Cookie set to: " + alwaysOpenInNewTab);
       }
 
 
