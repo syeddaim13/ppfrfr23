@@ -28,5 +28,5 @@ By the students, for the students.
 Batch of 2023 <3  
 
 ```
-This project is not affiliated with Cambridge International Examinations (CIE) in any way.
+This project is not affiliated with Cambridge International Examinations (CIE) or GCEguide in any way.
 ```
