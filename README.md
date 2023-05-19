@@ -1,4 +1,4 @@
-# Past Papers For Real For Real
+# CIE Paper Finder 🧐
 ##### ...brought to you by AIS' class of 2023.
 
 
@@ -26,3 +26,7 @@ Link to [website.](https://papers23.web.app/)
 Designed for Alwadi International School, Jeddah students.
 By the students, for the students.
 Batch of 2023 <3
+
+```
+This project is not affiliated with Cambridge International Examinations (CIE) in any way.
+```
