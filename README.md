@@ -22,10 +22,10 @@ However, if you do use it, please consider contributing back any changes you mak
 You must also credit the original author (me - Syed Ali Daim, AIS class of '23) of this project.
 
 
-Link to [website.](https://papers23.web.app/)
-Designed for Alwadi International School, Jeddah students.
-By the students, for the students.
-Batch of 2023 <3
+Link to [website.](https://papers23.web.app/)  
+Designed for Alwadi International School, Jeddah students.  
+By the students, for the students.  
+Batch of 2023 <3  
 
 ```
 This project is not affiliated with Cambridge International Examinations (CIE) in any way.
