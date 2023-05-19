@@ -1,3 +1,6 @@
+let version = "3.22"
+console.log("Version: " + version)
+
 var alwaysOpenInNewTab //global variable to store cookie value
 var link //global variable to store link
 
