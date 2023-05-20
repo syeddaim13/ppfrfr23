@@ -309,7 +309,7 @@
     
         <br />
     
-        <input type="submit" value="Get paper" onclick="run()" />
+        <input type="submit" id="getpaperbtn" value="Get paper" onclick="run()" />
     
         <br />
         <br />
@@ -356,6 +356,6 @@
         </dialog>
         
   </body>
-  <script src="indexv3.22.js"></script>
+  <script src="indexv3.23.js"></script>
 </html>
     
