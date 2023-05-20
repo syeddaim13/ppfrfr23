@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Preferences</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+                
+      @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+      body, h1, p, label, select, input, ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        color: white;
+        font-family: "Cabin", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.5;
+        background-color: black;
+        color: #333333;
+      }
+
+      h1, p, label, select, input, ul, li {
+        text-align: center;
+        color: white;
+      }
+
+      h1 {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-size: 16px;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      select,
+      input[type="submit"] {
+        font-size: 13px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
+        background-color: #ffffff;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 300px;
+        color: black;
+
+      }
+
+      input[type="submit"] {
+        cursor: pointer;
+
+        background-color: #1e90ff;
+        color: #ffffff;
+        border: none;
+        display: block;
+        margin: 0 auto;
+
+      }
+
+      input[type="submit"]:hover {
+        background-color: #4169e1;
+      }
+
+      ul {
+        list-style-type: none;
+        margin-bottom: 20px;
+      }
+
+      li {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      a {
+          color: #437fb4;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+      .container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .column {
+          flex: 1;
+          margin-right: 20px;
+          margin: 0 10px;
+        }
+
+        table {
+          table-layout:flex;
+          width: 100%;
+        }
+
+        table td {
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        option {
+          font-size: 10px;
+        }
+        
+        .modaltext {
+          color: black;
+        }
+
+        dialog {
+          background-color: black;
+          border-radius: 5px;
+          padding: 10px;
+          border: 1px solid #cccccc;
+        }
+
+        dialog::backdrop {
+          background-color: black;
+        }
+
+        input.checkboxbig {
+          width: 30px;
+          height: 30px;
+          padding-top: 10px;
+          vertical-align: middle;
+          position: relative;
+          top: -2px;
+        }
+        h3 {
+          font-size: 50px;
+        }
+        a {
+          text-decoration: none;
+        }
+
+        h4 {
+          font-size: 20px;
+        }
+
+        .radio-group label {
+          display: inline-block;
+          margin-right: 10px;
+        }
+
+        legend {
+          color: white;
+        }
+
+        .modal-fade-in {
+          animation-name: modalFadeIn;
+          animation-duration: 0.3s;
+          animation-timing-function: ease-in-out;
+        }
+
+        @keyframes modalFadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        
+        .website-fade-in {
+          opacity: 0;
+          animation-name: websiteFadeIn;
+          animation-duration: 1s;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+        }
+
+        @keyframes websiteFadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+    </style>
+  </head>
+  <body class="website-fade-in">
+    <div class="container">
+      <div class="column">
+        <h1>Welcome to Paper Finder 🧐 - A Levels Edition.</h1>
+        <p>Settings panel</p>
+
+        <table>
+            <tr>
+                <td> <p> Clear all cookies? </p> </td>
+            </tr>
+            <tr>
+                <td> <input type="submit" value="Reset" onclick="run()"></td>
+        </table>
+
+      </div>
+
+  </body>
+  <script>
+    //function to delete all cookies
+    function run() {
+      var cookies = document.cookie.split(";");
+
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie =
+          name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+      }
+      alert("Cookies cleared!");
+      
+    }
+
+  </script>
+</html>
