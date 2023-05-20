@@ -6,14 +6,15 @@ var link //global variable to store link
 
 //on page load, check if all fields are filled, and if not, hide submit button
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
     if (document.getElementById("subject").value !== "" && document.getElementById("paper").value !== "" && document.getElementById("month").value !== "" && document.getElementById("year").value !== "" && document.getElementById("type").value !== "" && (document.getElementById("variant1").checked == true || document.getElementById("variant2").checked == true || document.getElementById("variant3").checked == true)) {
-        document.getElementById("getpaperbtn").style.display = ""
+        document.getElementById("getpaperbtn").style.display = "";
     }
     else {
-        document.getElementById("getpaperbtn").style.display = "none"
+        document.getElementById("getpaperbtn").style.display = "none";
     }
-}
+});
+
 
 //event listeners that check if all fields are filled and shows submit button if they are
 
