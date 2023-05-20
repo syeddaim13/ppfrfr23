@@ -232,10 +232,10 @@ window.onload = function() {
 
 window.onload = function() {
     if (document.getElementById("subject").value == "" || document.getElementById("paper").value == "" || document.getElementById("month").value == "" || document.getElementById("year").value == "" || document.getElementById("type").value == "" || (document.getElementById("variant1").checked == false && document.getElementById("variant2").checked == false && document.getElementById("variant3").checked == false)) {
-        document.getElementById("submit").style.display = "none"
+        document.getElementById("getpaperbtn").style.display = "none"
     }
     else {
-        document.getElementById("submit").style.display = ""
+        document.getElementById("getpaperbtn").style.display = ""
 
     }
 }
