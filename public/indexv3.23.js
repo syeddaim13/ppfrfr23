@@ -4,6 +4,93 @@ console.log("Version: " + version)
 var alwaysOpenInNewTab //global variable to store cookie value
 var link //global variable to store link
 
+//hide submit button until all fields are filled
+document.getElementById("getpaperbtn").style.display = "none"
+
+//event listeners that check if all fields are filled and shows submit button if they are
+
+document.getElementById("subject").addEventListener("change", function() {
+    if (document.getElementById("subject").value !== "" && document.getElementById("paper").value !== "" && document.getElementById("month").value !== "" && document.getElementById("year").value !== "" && document.getElementById("type").value !== "" && (document.getElementById("variant1").checked == true || document.getElementById("variant2").checked == true || document.getElementById("variant3").checked == true)) {
+        document.getElementById("getpaperbtn").style.display = ""
+    }
+    else {
+        document.getElementById("getpaperbtn").style.display = "none"
+    }
+})
+
+document.getElementById("paper").addEventListener("change", function() {
+    if (document.getElementById("subject").value !== "" && document.getElementById("paper").value !== "" && document.getElementById("month").value !== "" && document.getElementById("year").value !== "" && document.getElementById("type").value !== "" && (document.getElementById("variant1").checked == true || document.getElementById("variant2").checked == true || document.getElementById("variant3").checked == true)) {
+        document.getElementById("getpaperbtn").style.display = ""
+    }
+    else {
+        document.getElementById("getpaperbtn").style.display = "none"
+    }
+
+})
+
+document.getElementById("month").addEventListener("change", function() {
+    if (document.getElementById("subject").value !== "" && document.getElementById("paper").value !== "" && document.getElementById("month").value !== "" && document.getElementById("year").value !== "" && document.getElementById("type").value !== "" && (document.getElementById("variant1").checked == true || document.getElementById("variant2").checked == true || document.getElementById("variant3").checked == true)) {
+        document.getElementById("getpaperbtn").style.display = ""
+    }
+    else {
+        document.getElementById("getpaperbtn").style.display = "none"
+    }
+
+})
+
+document.getElementById("year").addEventListener("change", function() {
+    if (document.getElementById("subject").value !== "" && document.getElementById("paper").value !== "" && document.getElementById("month").value !== "" && document.getElementById("year").value !== "" && document.getElementById("type").value !== "" && (document.getElementById("variant1").checked == true || document.getElementById("variant2").checked == true || document.getElementById("variant3").checked == true)) {
+        document.getElementById("getpaperbtn").style.display = ""
+    }
+    else {
+        document.getElementById("getpaperbtn").style.display = "none"
+    }
+
+})
+
+document.getElementById("type").addEventListener("change", function() {
+    if (document.getElementById("subject").value !== "" && document.getElementById("paper").value !== "" && document.getElementById("month").value !== "" && document.getElementById("year").value !== "" && document.getElementById("type").value !== "" && (document.getElementById("variant1").checked == true || document.getElementById("variant2").checked == true || document.getElementById("variant3").checked == true)) {
+        document.getElementById("getpaperbtn").style.display = ""
+    }
+    else {
+        document.getElementById("getpaperbtn").style.display = "none"
+    }
+
+})
+
+document.getElementById("variant1").addEventListener("change", function() {
+    if (document.getElementById("subject").value !== "" && document.getElementById("paper").value !== "" && document.getElementById("month").value !== "" && document.getElementById("year").value !== "" && document.getElementById("type").value !== "" && (document.getElementById("variant1").checked == true || document.getElementById("variant2").checked == true || document.getElementById("variant3").checked == true)) {
+        document.getElementById("getpaperbtn").style.display = ""
+    }
+    else {
+        document.getElementById("getpaperbtn").style.display = "none"
+    }
+
+})
+
+document.getElementById("variant2").addEventListener("change", function() {
+    if (document.getElementById("subject").value !== "" && document.getElementById("paper").value !== "" && document.getElementById("month").value !== "" && document.getElementById("year").value !== "" && document.getElementById("type").value !== "" && (document.getElementById("variant1").checked == true || document.getElementById("variant2").checked == true || document.getElementById("variant3").checked == true)) {
+        document.getElementById("getpaperbtn").style.display = ""
+    }
+    else {
+        document.getElementById("getpaperbtn").style.display = "none"
+    }
+
+})
+
+document.getElementById("variant3").addEventListener("change", function() {
+    if (document.getElementById("subject").value !== "" && document.getElementById("paper").value !== "" && document.getElementById("month").value !== "" && document.getElementById("year").value !== "" && document.getElementById("type").value !== "" && (document.getElementById("variant1").checked == true || document.getElementById("variant2").checked == true || document.getElementById("variant3").checked == true)) {
+        document.getElementById("getpaperbtn").style.display = ""
+    }
+    else {
+        document.getElementById("getpaperbtn").style.display = "none"
+    }
+
+})
+
+
+
+
 function getCookie(name) {
     var cookieArr = document.cookie.split("; ");
     for (var i = 0; i < cookieArr.length; i++) {   //function to get cookie value
@@ -361,3 +448,4 @@ function openLink() {
         window.open(link, "_self");
     }
 }
+
