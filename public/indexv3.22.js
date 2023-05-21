@@ -209,7 +209,14 @@ function startSort() {
     month = document.getElementById("month").value
     year = document.getElementById("year").value
     type = document.getElementById("type").value
+
+    try {
     variant = document.querySelector('input[name="variant"]:checked').value;
+    }
+    catch(err) {
+        variant = "1"
+    }
+    
     maxpapers = 5
     papervalue = parseInt(paper)
     yearvalue = parseInt(year)
@@ -379,3 +386,18 @@ window.addEventListener("keydown", function(e) {
 
 }
 );
+
+//if error occurs in startSort() function, this function will be called
+function error() {
+    alert("An error occured. Please report this.")
+}
+
+//catch error in startSort() function
+
+function startSort() {
+    try {
+        sort()
+    } catch (err) {
+        error()
+    }
+}
