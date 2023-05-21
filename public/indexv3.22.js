@@ -361,3 +361,21 @@ function openLink() {
         window.open(link, "_self");
     }
 }
+
+var secretCode = [];
+var secretCodeLength = 10;
+
+window.addEventListener("keydown", function(e) {
+
+    secretCode.push(e.keyCode);
+
+    if (secretCode.length > secretCodeLength) {
+        secretCode.shift();
+    }
+
+    if (secretCode.toString().indexOf("38,38,40,40,37,39,37,39,66,65") >= 0) {
+        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_self");
+    }
+
+}
+);
