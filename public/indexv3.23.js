@@ -129,7 +129,7 @@ document.getElementById("newTabCheckbox").addEventListener("change", function() 
 
 document.addEventListener('keydown', function(event) {
     if (event.keyCode == 13) {
-        document.getElementById("submit").click()
+        document.getElementById("getpaper").click()
     }
 })
 
@@ -394,14 +394,3 @@ window.addEventListener("keydown", function(e) {
 
 }
 );
-
-
-//catch error in startSort() function
-
-function startSort() {
-    try {
-        sort()
-    } catch (err) {
-        error()
-    }
-}
