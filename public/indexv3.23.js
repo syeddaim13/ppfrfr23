@@ -1,4 +1,4 @@
-let version = "3.22"
+let version = "3.23"
 console.log("Version: " + version)
 
 var alwaysOpenInNewTab //global variable to store cookie value
@@ -123,6 +123,14 @@ document.getElementById("variant3").addEventListener("change", function() {
 document.getElementById("newTabCheckbox").addEventListener("change", function() {
     document.cookie = "newTabCheckboxVal=" + document.getElementById("newTabCheckbox").checked
     console.log("newtabcheckbox Cookie set to: " + document.getElementById("newTabCheckbox").checked)
+})
+
+//if enter is pressed anywhere, click the button
+
+document.addEventListener('keydown', function(event) {
+    if (event.keyCode == 13) {
+        document.getElementById("submit").click()
+    }
 })
 
 //read cookies using getCookie function and set values when page loads if cookie present
@@ -387,10 +395,6 @@ window.addEventListener("keydown", function(e) {
 }
 );
 
-//if error occurs in startSort() function, this function will be called
-function error() {
-    alert("An error occured. Please report this.")
-}
 
 //catch error in startSort() function
 
