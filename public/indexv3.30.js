@@ -1,4 +1,4 @@
-let version = "3.24"
+let version = "3.30"
 console.log("Version: " + version)
 
 var alwaysOpenInNewTab //global variable to store cookie value
@@ -333,6 +333,19 @@ function startSort() {
 
     else if (subject == "IT" && paper == "4" && type == "ms") {
         link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+'4'+'.pdf'; //link for IT p4 ms
+    }
+
+    else if (subject == "IT" && paper == "2" && type == "qp" && year == "17") {
+        link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+'2'+'.pdf';
+        //link for IT p4 qp in 2017
+    }
+    else if (subject == "IT" && paper == "2" && type == "qp") {
+        link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+'02'+'.pdf';
+        //link for IT p4 qp after 2017
+    }
+
+    else if (subject == "IT" && paper == "2" && type == "ms") {
+        link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+type+'_'+'2'+'.pdf'; //link for IT p4 ms
     }
     //IT END
 
