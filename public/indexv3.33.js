@@ -1,4 +1,4 @@
-let version = "3.32"
+let version = "3.33"
 console.log("Version: " + version)
 
 var alwaysOpenInNewTab //global variable to store cookie value
@@ -305,7 +305,8 @@ function startSort() {
     }
 
     else if (yearvalue == 2023 && month == "w") {
-        alert("November 2023 papers are not yet available.")
+        alert("November 2023 papers are not yet available.");
+        link = undefined;
     }
 
 
@@ -315,6 +316,13 @@ function startSort() {
         link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+year+'_'+"SF"+'_'+paper+'.zip'; //link for sf 2017 march
     }
 // end special cases
+
+    //FM
+    else if (subject == "Further Math" && monthcode == "m") {
+        alert("Further Math does not have march exams.");
+        link = undefined;
+    }
+    //end FM
 
     //IT
     else if (type == "sf" && sfeligible == false ) {
