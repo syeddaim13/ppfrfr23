@@ -1,4 +1,4 @@
-let version = "3.30"
+let version = "3.31"
 console.log("Version: " + version)
 
 var alwaysOpenInNewTab //global variable to store cookie value
@@ -238,6 +238,11 @@ function startSort() {
             subjectcode = "9709"
             subjectlink = "Mathematics%20(9709)"
             break;
+        case "Further Math":
+            subjectcode = "9231"
+            subjectlink = "Mathematics%20-%20Further%20(9231)"
+            maxpapers = 4
+            break; 
         case "IT":
             subjectcode = "9626"
             subjectlink = "Information%20Technology%20(9626)"
