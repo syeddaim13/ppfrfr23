@@ -1,4 +1,4 @@
-let version = "3.31"
+let version = "3.32"
 console.log("Version: " + version)
 
 var alwaysOpenInNewTab //global variable to store cookie value
@@ -302,6 +302,10 @@ function startSort() {
 
     else if (type == "er") {
         link = 'https://papers.gceguide.com/A%20Levels/'+subjectlink+'/20'+year+'/'+subjectcode+'_'+monthcode+year+'_'+"er.pdf"; //link for er
+    }
+
+    else if (yearvalue == 2023 && month == "w") {
+        alert("November 2023 papers are not yet available.")
     }
 
 
