@@ -218,6 +218,7 @@
                   <legend>Choose a subject:</legend>
                   <select name="subject" id="subject">
                     <option value="Math">Mathematics 9709</option>
+                    <option value="Further Math">Further Mathematics 9231</option>
                     <option value="IT">Information Technology 9626</option>
                     <option value="Physics">Physics 9702</option>
                     <option value="Chemistry">Chemistry 9701</option>
@@ -264,7 +265,8 @@
                     <option value="19">2019</option>
                     <option value="20">2020</option>
                     <option value="21">2021</option>
-                    <option selected value="22">2022</option>
+                    <option value="22">2022</option>
+                    <option selected value="23">2023</option>
                   </select>
                 </fieldset>
               </td>
